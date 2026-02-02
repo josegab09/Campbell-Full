@@ -1,0 +1,454 @@
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { 
+  CheckCircle2, 
+  Circle, 
+  ChevronRight, 
+  ArrowLeft,
+  BookOpen, 
+  Layers, 
+  Info, 
+  Moon, 
+  Sun,
+  Trophy,
+  Check
+} from 'lucide-react';
+
+// --- CONFIGURAÇÃO DE DADOS (ATUALIZADA UNIDADE 1, 2 E INÍCIO DA 3) ---
+const CAMPBELL_DATA = [
+  {
+    id: 'u1',
+    title: 'UNIDADE 1: A QUÍMICA DA VIDA',
+    color: 'blue',
+    chapters: [
+      {
+        id: 'c1',
+        title: 'Capítulo 1: Evolução, Temas da Biologia e Pesquisa Científica',
+        concepts: [
+          { id: '1.1', text: 'Conceito 1.1: O estudo da vida revela temas comuns', summary: 'Exploração dos pilares que conectam todos os seres vivos.', tasks: ['Tema: Novas propriedades emergem em cada nível da hierarquia biológica', 'Tema: os processos da vida envolvem a expressão e a transmissão de informação genética', 'Tema: a vida requer a transferência e transformação de energia e matéria', 'Tema: de ecossistemas a moléculas, as interações são fundamentais nos sistemas biológicos', 'Evolução, o tema central da biologia'] },
+          { id: '1.2', text: 'Conceito 1.2: O tema central: a evolução é responsável pela uniformidade e diversidade da vida', summary: 'A base teórica de Darwin e a classificação dos domínios da vida.', tasks: ['Classificando a diversidade da vida', 'Charles Darwin e a teoria da seleção natural', 'A árvore da vida'] },
+          { id: '1.3', text: 'Conceito 1.3: Ao estudar a natureza, os cientistas fazem observações, formulam e testam hipóteses', summary: 'O método científico em ação.', tasks: ['Fazendo observações', 'Formulando e testando hipóteses', 'A flexibilidade do processo científico', 'Estudo de caso: investigando a coloração da pelagem em camundongos', 'Variáveis experimentais e controles', 'Teoria na ciência'] },
+          { id: '1.4', text: 'Conceito 1.4: A ciência faz uso de uma abordagem cooperativa e de diversos pontos de vista', summary: 'A natureza social da descoberta científica.', tasks: ['Aprimorando o trabalho de outros', 'Ciência, tecnologia e sociedade', 'O valor de pontos de vista diversificados'] }
+        ]
+      },
+      {
+        id: 'c2',
+        title: 'Capítulo 2: O Contexto Químico da Vida',
+        concepts: [
+          { id: '2.1', text: 'Conceito 2.1: A matéria consiste em elementos químicos na forma simples e em combinações', summary: 'Elementos e compostos fundamentais.', tasks: ['Elementos e compostos', 'Os elementos da vida', 'Estudo de caso: evolução da tolerância a elementos tóxicos'] },
+          { id: '2.2', text: 'Conceito 2.2: As propriedades de um elemento dependem da estrutura de seus átomos', summary: 'Átomos, isótopos e energia eletrônica.', tasks: ['Partículas subatômicas', 'Número atômico e massa atômica', 'Isótopos', 'Os níveis de energia dos elétrons', 'Distribuição eletrônica e propriedades químicas', 'Orbitais eletrônicos'] },
+          { id: '2.3', text: 'Conceito 2.3: A formação e a função das moléculas dependem das ligações químicas', summary: 'Ligações covalentes, iônicas e fracas.', tasks: ['Ligações covalentes', 'Ligações iônicas', 'Ligações químicas fracas', 'Forma e função moleculares'] },
+          { id: '2.4', text: 'Conceito 2.4: As reações químicas formam e rompem ligações químicas', summary: 'Dinâmica química e equilíbrio.', tasks: ['Entendendo a dinâmica das reações químicas', 'Equilíbrio químico e fluxo de matéria'] }
+        ]
+      },
+      {
+        id: 'c3',
+        title: 'Capítulo 3: Água e Vida',
+        concepts: [
+          { id: '3.1', text: 'Conceito 3.1: Ligações covalentes polares e hidrogênio', summary: 'A base da polaridade da água.', tasks: ['A molécula que sustenta toda a vida'] },
+          { id: '3.2', text: 'Conceito 3.2: Quatro propriedades emergentes da água', summary: 'Coesão, temperatura, gelo e solvência.', tasks: ['Coesão das moléculas de água', 'Moderação da temperatura pela água', 'Flutuação do gelo sobre a água líquida', 'Água: o solvente da vida', 'Possível evolução de vida em outros planetas'] },
+          { id: '3.3', text: 'Conceito 3.3: Condições ácidas e básicas afetam os organismos', summary: 'Equilíbrio de pH e tampões.', tasks: ['Ácidos e bases', 'A escala do pH', 'Tampões', 'Acidificação: ameaças à qualidade da água'] }
+        ]
+      },
+      {
+        id: 'c4',
+        title: 'Capítulo 4: O Carbono e a Diversidade Molecular da Vida',
+        concepts: [
+          { id: '4.1', text: 'Conceito 4.1: A química orgânica é o estudo dos compostos de carbono', summary: 'As origens das moléculas orgânicas.', tasks: ['Moléculas orgânicas e a origem da vida na Terra'] },
+          { id: '4.2', text: 'Conceito 4.2: Átomos de carbono formam diversas moléculas ligando-se a outros quatro átomos', summary: 'A versatilidade estrutural do carbono.', tasks: ['A formação de ligações com o carbono', 'A diversidade molecular se origina da variação dos esqueletos de carbono'] },
+          { id: '4.3', text: 'Conceito 4.3: Grupos químicos essenciais para a função molecular', summary: 'Funcionalidade e ATP.', tasks: ['Os grupos químicos mais importantes no processo da vida', 'ATP: importante fonte de energia para os processos celulares', 'Os elementos químicos da vida: uma revisão'] }
+        ]
+      },
+      {
+        id: 'c5',
+        title: 'Capítulo 5: Estrutura e Função de Grandes Moléculas Biológicas',
+        concepts: [
+          { id: '5.1', text: 'Conceito 5.1: Macromoléculas são polímeros compostos por monômeros', summary: 'Síntese e clivagem.', tasks: ['A síntese e a clivagem de polímeros', 'A diversidade dos polímeros'] },
+          { id: '5.2', text: 'Conceito 5.2: Carboidratos servem como combustível e material de construção', summary: 'Açúcares e polissacarídeos.', tasks: ['Açúcares', 'Polissacarídeos'] },
+          { id: '5.3', text: 'Conceito 5.3: Lipídeos são moléculas hidrofóbicas', summary: 'Gorduras, fosfolipídeos e esteroides.', tasks: ['Gorduras', 'Fosfolipídeos', 'Esteroides'] },
+          { id: '5.4', text: 'Conceito 5.4: Proteínas apresentam grande variedade de estruturas e funções', summary: 'Aminoácidos e polipeptídeos.', tasks: ['Monômeros de aminoácidos', 'Polipeptídeos (polímeros de aminoácidos)', 'A estrutura e a função das proteínas'] },
+          { id: '5.5', text: 'Conceito 5.5: Ácidos nucleicos e informação hereditária', summary: 'DNA, RNA e nucleotídeos.', tasks: ['Os papéis dos ácidos nucleicos', 'Os componentes dos ácidos nucleicos', 'Polímeros de nucleotídeos', 'As estruturas das moléculas de DNA e RNA'] },
+          { id: '5.6', text: 'Conceito 5.6: Genômica e proteômica transformaram a pesquisa', summary: 'Aplicações modernas da biologia molecular.', tasks: ['DNA e proteínas: novas fitas métricas da evolução'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u2',
+    title: 'UNIDADE 2: A CÉLULA',
+    color: 'emerald',
+    chapters: [
+      {
+        id: 'c6',
+        title: 'Capítulo 6: Uma Viagem pela Célula',
+        concepts: [
+          { id: '6.1', text: 'Conceito 6.1: Microscópios e bioquímica no estudo das células', summary: 'Ferramentas fundamentais da biologia celular.', tasks: ['Microscopia', 'Fracionamento celular'] },
+          { id: '6.2', text: 'Conceito 6.2: Células eucarióticas e compartimentalização', summary: 'Diferenças entre procariontes e eucariontes.', tasks: ['Comparação entre células procarióticas e eucarióticas', 'Uma visão panorâmica da célula eucariótica'] },
+          { id: '6.3', text: 'Conceito 6.3: Instruções genéticas no núcleo e ribossomos', summary: 'Central de informações e fábricas de proteínas.', tasks: ['O núcleo: central de informações', 'Ribossomos: fábricas de proteínas'] },
+          { id: '6.4', text: 'Conceito 6.4: O sistema de endomembranas e o tráfego de proteínas', summary: 'RE, Golgi, Lisossomos e Vacúolos.', tasks: ['O retículo endoplasmático: fábrica biossintética', 'O aparelho de Golgi: centro de remessa e recepção', 'Lisossomos: compartimentos de digestão', 'Vacúolos: diversos compartimentos de manutenção', 'O sistema de endomembranas: uma revisão'] },
+          { id: '6.5', text: 'Conceito 6.5: Mitocôndrias e cloroplastos na mudança de energia', summary: 'Conversão de energia química e captura de luz.', tasks: ['As origens evolutivas de mitocôndrias e cloroplastos', 'Mitocôndrias: conversão de energia química', 'Cloroplastos: captura de energia livre', 'Peroxissomos: oxidação'] },
+          { id: '6.6', text: 'Conceito 6.6: O citoesqueleto e a organização celular', summary: 'Suporte, motilidade e rede de fibras.', tasks: ['Funções do citoesqueleto: suporte e motilidade', 'Componentes do citoesqueleto'] },
+          { id: '6.7', text: 'Conceito 6.7: Componentes extracelulares e conexões celulares', summary: 'Coordenação de atividades além da membrana.', tasks: ['Paredes celulares de plantas', 'A matriz extracelular (MEC) de células animais', 'Junções intercelulares', 'A célula: unidade viva maior do que a soma das partes'] }
+        ]
+      },
+      {
+        id: 'c7',
+        title: 'Capítulo 7: Estrutura e Função da Membrana',
+        concepts: [
+          { id: '7.1', text: 'Conceito 7.1: Membranas celulares como mosaicos fluidos', summary: 'Lipídeos, proteínas e carboidratos da membrana.', tasks: ['A fluidez das membranas', 'Evolução das diferenças na composição lipídica', 'Proteínas de membrana e suas funções', 'Papel dos carboidratos no reconhecimento célula-célula', 'Síntese e lateralidade das membranas'] },
+          { id: '7.2', text: 'Conceito 7.2: Permeabilidade seletiva da membrana', summary: 'Bicamada lipídica e proteínas de transporte.', tasks: ['A permeabilidade da bicamada lipídica', 'Proteínas de transporte'] },
+          { id: '7.3', text: 'Conceito 7.3: Transporte passivo e difusão', summary: 'Movimento sem gasto de energia.', tasks: ['Efeitos da osmose no balanço hídrico', 'Difusão facilitada: transporte passivo auxiliado'] },
+          { id: '7.4', text: 'Conceito 7.4: Transporte ativo e gasto de energia', summary: 'Bombas de íons e cotransporte contra o gradiente.', tasks: ['A necessidade de energia no transporte ativo', 'Como a bomba de íons mantém o potencial da membrana', 'Cotransporte: transporte acoplado a uma proteína'] },
+          { id: '7.5', text: 'Conceito 7.5: Transporte em massa: exocitose e endocitose', summary: 'Mecanismos de transporte de grandes volumes.', tasks: ['Exocitose', 'Endocitose'] }
+        ]
+      },
+      {
+        id: 'c8',
+        title: 'Capítulo 8: Introdução ao Metabolismo',
+        concepts: [
+          { id: '8.1', text: 'Conceito 8.1: Metabolismo e as leis da termodinâmica', summary: 'Transformação de matéria e formas de energia.', tasks: ['Organização da química da vida em rotas metabólicas', 'Formas de energia', 'As leis da transformação de energia'] },
+          { id: '8.2', text: 'Conceito 8.2: Variação de energia livre e espontaneidade', summary: 'O significado do ΔG no metabolismo.', tasks: ['Variação de energia livre, ΔG', 'Energia livre, estabilidade e equilíbrio', 'Energia livre e metabolismo'] },
+          { id: '8.3', text: 'Conceito 8.3: A molécula de ATP e o trabalho celular', summary: 'Acoplamento de reações exergônicas e endergônicas.', tasks: ['Estrutura e hidrólise do ATP', 'Como a hidrólise do ATP realiza trabalho', 'A regeneração do ATP'] },
+          { id: '8.4', text: 'Conceito 8.4: Enzimas e a barreira de energia de ativação', summary: 'Catálise e especificidade de substrato.', tasks: ['A barreira de energia de ativação', 'Como as enzimas aceleram reações', 'Especificidade de substrato das enzimas', 'Catálise no sítio ativo da enzima', 'Efeito das condições locais na atividade enzimática', 'Evolução das enzimas'] },
+          { id: '8.5', text: 'Conceito 8.5: Regulação da atividade enzimática', summary: 'Controle alostérico e localização das enzimas.', tasks: ['Regulação alostérica das enzimas', 'Localização das enzimas no interior da célula'] }
+        ]
+      },
+      {
+        id: 'c9',
+        title: 'Capítulo 9: Respiração Celular e Fermentação',
+        concepts: [
+          { id: '9.1', text: 'Conceito 9.1: Rotas catabólicas e oxidação de combustíveis', summary: 'Produção de ATP e reações redox.', tasks: ['Rotas catabólicas e produção de ATP', 'Reações redox: oxidação e redução', 'As fases da respiração celular: uma prévia'] },
+          { id: '9.2', text: 'Conceito 9.2: Glicólise e energia química', summary: 'Oxidação da glicose a piruvato.', tasks: ['A quebra da glicose em dez passos enzimáticos'] },
+          { id: '9.3', text: 'Conceito 9.3: Oxidação do piruvato e ciclo do ácido cítrico', summary: 'Completa oxidação para extração de energia.', tasks: ['Oxidação do piruvato a acetil-CoA', 'O ciclo do ácido cítrico'] },
+          { id: '9.4', text: 'Conceito 9.4: Fosforilação oxidativa e quimiosmose', summary: 'Transporte de elétrons e síntese massiva de ATP.', tasks: ['A rota do transporte de elétrons', 'Quimiosmose: o mecanismo acoplado de energia', 'Um balanço da produção de ATP pela respiração celular'] },
+          { id: '9.5', text: 'Conceito 9.5: Fermentação e respiração anaeróbia', summary: 'Produção de ATP sem o uso de oxigênio.', tasks: ['Tipos de fermentação', 'Comparação entre fermentação e respiração aeróbia e anaeróbia', 'O significado evolutivo da glicólise'] },
+          { id: '9.6', text: 'Conceito 9.6: Conexões metabólicas da glicólise e ciclo de Krebs', summary: 'Versatilidade do catabolismo e anabolismo.', tasks: ['A versatilidade do catabolismo', 'Biossíntese (rotas anabólicas)', 'Regulação da respiração celular via retroalimentação'] }
+        ]
+      },
+      {
+        id: 'c10',
+        title: 'Capítulo 10: Fotossíntese',
+        concepts: [
+          { id: '10.1', text: 'Conceito 10.1: Fotossíntese e conversão de energia luminosa', summary: 'Cloroplastos e as fases da fotossíntese.', tasks: ['Cloroplastos: os locais da fotossíntese nos vegetais', 'Rastreando átomos ao longo da fotossíntese', 'As duas fases da fotossíntese: uma prévia'] },
+          { id: '10.2', text: 'Conceito 10.2: Reações luminosas e conversão em ATP/NADPH', summary: 'Fotossistemas e fluxo de elétrons.', tasks: ['A natureza da luz solar', 'Pigmentos fotossintéticos: os receptores de luz', 'Excitação da clorofila pela luz', 'O fotossistema: centro de reação e coletores', 'Fluxo linear de elétrons', 'Fluxo cíclico de elétrons', 'Comparação entre quimiosmose em cloroplastos e mitocôndrias'] },
+          { id: '10.3', text: 'Conceito 10.3: O ciclo de Calvin e a redução de CO2', summary: 'Produção de açúcar a partir de energia química.', tasks: ['Fixação de Carbono, Redução e Regeneração do Aceitador de CO2'] },
+          { id: '10.4', text: 'Conceito 10.4: Fixação do carbono em climas áridos', summary: 'Plantas C4, MAC e fotorrespiração.', tasks: ['Fotorrespiração: um relicto evolutivo?', 'Plantas C4', 'Plantas MAC', 'A importância da fotossíntese: uma revisão'] }
+        ]
+      },
+      {
+        id: 'c11',
+        title: 'Capítulo 11: Comunicação Celular',
+        concepts: [
+          { id: '11.1', text: 'Conceito 11.1: Conversão de sinais externos em respostas', summary: 'Evolução e estágios da sinalização celular.', tasks: ['Evolução da sinalização celular', 'Sinalização local e de longa distância', 'Os três estágios da sinalização celular: uma prévia'] },
+          { id: '11.2', text: 'Conceito 11.2: Recepção: ligação da molécula sinalizadora', summary: 'Receptores de membrana e intracelulares.', tasks: ['Os receptores na membrana plasmática', 'Receptores intracelulares'] },
+          { id: '11.3', text: 'Conceito 11.3: Transdução: cascata de interações moleculares', summary: 'Segundos mensageiros e fosforilação.', tasks: ['Rotas de transdução de sinal', 'Fosforilação e desfosforilação proteica', 'Pequenas moléculas e íons como segundos mensageiros'] },
+          { id: '11.4', text: 'Conceito 11.4: Resposta: regulação de atividades celulares', summary: 'Respostas nucleares e citoplasmáticas.', tasks: ['Respostas nucleares e citoplasmáticas', 'Regulação da resposta'] },
+          { id: '11.5', text: 'Conceito 11.5: Apoptose: morte celular programada', summary: 'Integração de rotas de sinalização.', tasks: ['Apoptose no verme Caenorhabditis elegans', 'Rotas apoptóticas e os sinais que as desencadeiam'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u3',
+    title: 'UNIDADE 3: GENÉTICA',
+    color: 'purple',
+    chapters: [
+      {
+        id: 'c12',
+        title: 'Capítulo 12: O Ciclo Celular',
+        concepts: [
+          { id: '12.1', text: 'Conceito 12.1: Divisões celulares e células geneticamente idênticas', summary: 'Material genético e distribuição cromossômica.', tasks: ['Organização celular do material genético', 'Distribuição dos cromossomos durante a divisão'] },
+          { id: '12.2', text: 'Conceito 12.2: Fase mitótica e interfase no ciclo celular', summary: 'Etapas da mitose e fissão binária.', tasks: ['Fases do ciclo celular', 'O fuso mitótico: uma análise mais detalhada', 'Citocinese: uma análise mais detalhada', 'Fissão binária em bactérias', 'A evolução da mitose'] },
+          { id: '12.3', text: 'Conceito 12.3: Regulação por sistema de controle molecular', summary: 'Controle do ciclo celular e câncer.', tasks: ['O sistema de controle do ciclo celular', 'A perda do controle do ciclo celular nas células cancerosas'] }
+        ]
+      }
+    ]
+  }
+];
+
+// --- SISTEMA DE ÁUDIO SINTETIZADO ---
+const playSound = (type) => {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.08;
+    masterGain.connect(audioCtx.destination);
+
+    if (type === 'pop') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      osc.connect(gain); gain.connect(masterGain);
+      osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+    } else if (type === 'triumph') {
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + i * 0.1);
+        gain.gain.setValueAtTime(0, audioCtx.currentTime + i * 0.1);
+        gain.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + i * 0.1 + 0.05);
+        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + i * 0.1 + 0.3);
+        osc.connect(gain); gain.connect(masterGain);
+        osc.start(audioCtx.currentTime + i * 0.1);
+        osc.stop(audioCtx.currentTime + i * 0.1 + 0.4);
+      });
+    }
+  } catch (e) {}
+};
+
+const App = () => {
+  const [view, setView] = useState('units');
+  const [darkMode, setDarkMode] = useState(false);
+  const [checkedItems, setCheckedItems] = useState({});
+  const [selectedUnit, setSelectedUnit] = useState(null);
+  const [selectedChapter, setSelectedChapter] = useState(null);
+  const [selectedConcept, setSelectedConcept] = useState(null);
+  const [showSummary, setShowSummary] = useState(null);
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('campbell_v3_premium');
+    if (saved) setCheckedItems(JSON.parse(saved));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('campbell_v3_premium', JSON.stringify(checkedItems));
+  }, [checkedItems]);
+
+  const handleBack = () => {
+    if (view === 'checklist') setView('concepts');
+    else if (view === 'concepts') setView('chapters');
+    else if (view === 'chapters') setView('units');
+  };
+
+  const isConceptComplete = useCallback((conceptId, tasks) => {
+    return tasks.every((_, idx) => checkedItems[`${conceptId}-${idx}`]);
+  }, [checkedItems]);
+
+  const isChapterComplete = useCallback((chapter) => {
+    return chapter.concepts.every(c => isConceptComplete(c.id, c.tasks));
+  }, [checkedItems, isConceptComplete]);
+
+  const triggerConfetti = () => {
+    const newParticles = Array.from({ length: 25 }).map((_, i) => ({
+      id: Date.now() + i,
+      x: Math.random() * 100,
+      color: ['#3b82f6', '#10b981', '#a855f7', '#f97316'][Math.floor(Math.random() * 4)],
+      delay: Math.random() * 0.5
+    }));
+    setParticles(newParticles);
+    setTimeout(() => setParticles([]), 2500);
+  };
+
+  const toggleTask = (taskId, conceptId, tasks, chapter) => {
+    const wasComplete = isConceptComplete(conceptId, tasks);
+    const wasChapterComplete = isChapterComplete(chapter);
+
+    setCheckedItems(prev => {
+      const newState = { ...prev, [taskId]: !prev[taskId] };
+      playSound('pop');
+      
+      const isNowComplete = tasks.every((_, idx) => newState[`${conceptId}-${idx}`]);
+      if (isNowComplete && !wasComplete) triggerConfetti();
+
+      const isNowChapterComplete = chapter.concepts.every(c => 
+        c.tasks.every((_, idx) => newState[`${c.id}-${idx}`])
+      );
+      if (isNowChapterComplete && !wasChapterComplete) playSound('triumph');
+
+      return newState;
+    });
+  };
+
+  const currentProgress = useMemo(() => {
+    let total = 0, completed = 0;
+    const iterate = (arr) => {
+      arr.forEach(u => {
+        const chapters = u.chapters || [u];
+        chapters.forEach(ch => {
+          const concepts = ch.concepts || [ch];
+          concepts.forEach(co => {
+            co.tasks.forEach((_, idx) => {
+              total++;
+              if (checkedItems[`${co.id}-${idx}`]) completed++;
+            });
+          });
+        });
+      });
+    };
+    
+    if (view === 'units') iterate(CAMPBELL_DATA);
+    else if (view === 'chapters') iterate([selectedUnit]);
+    else if (view === 'concepts') iterate([{ chapters: [selectedChapter] }]);
+    else if (view === 'checklist') iterate([{ chapters: [{ concepts: [selectedConcept] }] }]);
+
+    return total > 0 ? Math.round((completed / total) * 100) : 0;
+  }, [view, selectedUnit, selectedChapter, selectedConcept, checkedItems]);
+
+  const unitColors = {
+    blue: { bg: 'bg-blue-50', text: 'text-blue-600', accent: '#3b82f6' },
+    emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', accent: '#10b981' },
+    purple: { bg: 'bg-purple-50', text: 'text-purple-600', accent: '#a855f7' },
+    orange: { bg: 'bg-orange-50', text: 'text-orange-600', accent: '#f97316' },
+  };
+
+  const activeColor = selectedUnit ? unitColors[selectedUnit.color] : unitColors.blue;
+
+  return (
+    <div className={`min-h-screen font-sans transition-colors duration-500 ${darkMode ? 'bg-[#0a0f1e] text-slate-100' : 'bg-white text-slate-900'}`}>
+      
+      {/* CONFETTI */}
+      <div className="fixed inset-0 pointer-events-none z-[100]">
+        {particles.map(p => (
+          <div key={p.id} className="absolute w-2 h-4 rounded-sm animate-bounce" style={{ left: `${p.x}%`, top: '-20px', backgroundColor: p.color, animation: `fall 2.5s ease-in forwards`, animationDelay: `${p.delay}s` }} />
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes fall { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+        .p-bar { transition: width 1s cubic-bezier(0.23, 1, 0.32, 1); }
+      `}</style>
+
+      {/* NAV */}
+      <header className={`sticky top-0 z-50 p-6 border-b backdrop-blur-xl ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-white/60 border-slate-100'}`}>
+        <div className="max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-4">
+              {view !== 'units' && (
+                <button onClick={handleBack} className="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+                  <ArrowLeft size={20} />
+                </button>
+              )}
+              <h1 className="font-black text-xl tracking-tighter uppercase italic text-emerald-500">Campbell</h1>
+            </div>
+            <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+              {darkMode ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-slate-400" />}
+            </button>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex justify-between items-end text-[9px] font-black uppercase tracking-[0.2em] opacity-40">
+              <span>{view === 'units' ? 'Global Progress' : selectedUnit?.title.split(':')[0]}</span>
+              <span>{currentProgress}%</span>
+            </div>
+            <div className={`w-full h-1 rounded-full ${darkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
+              <div className="h-full p-bar rounded-full" style={{ width: `${currentProgress}%`, backgroundColor: activeColor.accent }} />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-2xl mx-auto p-6 space-y-6 animate-in fade-in duration-700">
+        
+        {view === 'units' && (
+          <div className="grid gap-4">
+            {CAMPBELL_DATA.map(unit => (
+              <button key={unit.id} onClick={() => { setSelectedUnit(unit); setView('chapters'); }} className={`group p-6 rounded-[32px] border-2 transition-all duration-500 text-left ${darkMode ? 'border-slate-800 bg-slate-900/40' : 'border-slate-50 bg-slate-50 hover:bg-white hover:border-slate-200 hover:shadow-2xl hover:-translate-y-1'}`}>
+                <div className="flex items-center gap-6">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-xl ${unit.color === 'blue' ? 'bg-blue-500' : unit.color === 'emerald' ? 'bg-emerald-500' : 'bg-purple-500'}`}>
+                    <Layers size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[10px] font-black opacity-30 uppercase tracking-widest">{unit.id}</p>
+                    <h2 className="text-lg font-bold tracking-tight">{unit.title.split(': ')[1]}</h2>
+                  </div>
+                  <ChevronRight size={20} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {view === 'chapters' && (
+          <div className="space-y-4">
+            <h2 className={`text-[10px] font-black uppercase tracking-widest opacity-40 mb-8`}>{selectedUnit.title}</h2>
+            {selectedUnit.chapters.map(chapter => {
+              const done = isChapterComplete(chapter);
+              return (
+                <button key={chapter.id} onClick={() => { setSelectedChapter(chapter); setView('concepts'); }} className={`w-full p-6 flex items-center justify-between rounded-3xl border transition-all ${darkMode ? 'border-slate-800 bg-slate-900/40' : 'border-slate-100 bg-white hover:shadow-lg'}`}>
+                  <div className="flex items-center gap-5">
+                    <div className={`w-10 h-10 rounded-2xl flex items-center justify-center font-black text-sm ${done ? 'bg-emerald-500 text-white' : (darkMode ? 'bg-slate-800' : 'bg-slate-50 text-slate-400')}`}>
+                      {done ? <Check size={20} strokeWidth={4} /> : chapter.id.replace('c', '')}
+                    </div>
+                    <span className="font-bold text-lg">{chapter.title.split(': ')[1]}</span>
+                  </div>
+                  <ChevronRight size={18} className="opacity-20" />
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {view === 'concepts' && (
+          <div className="space-y-4">
+            <h2 className="text-[10px] font-black uppercase tracking-widest opacity-40 mb-8">{selectedChapter.title}</h2>
+            {selectedChapter.concepts.map(concept => {
+              const done = isConceptComplete(concept.id, concept.tasks);
+              return (
+                <div key={concept.id} className="relative group">
+                  <button onClick={() => { setSelectedConcept(concept); setView('checklist'); }} className={`w-full p-8 rounded-[40px] border-2 transition-all text-left ${darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-50 bg-white hover:border-slate-200'} ${done ? 'border-emerald-500/40 bg-emerald-50/5 dark:bg-emerald-950/5' : ''}`}>
+                    <div className="flex items-start justify-between">
+                      <h3 className={`font-extrabold text-lg leading-tight flex-1 pr-12 ${done ? 'text-emerald-600' : ''}`}>{concept.text}</h3>
+                      {done ? <Trophy size={24} className="text-emerald-500" /> : <ChevronRight size={24} className="opacity-10" />}
+                    </div>
+                    <div className="mt-6 flex items-center gap-3">
+                      <div className="flex gap-1">
+                        {concept.tasks.map((_, i) => (
+                          <div key={i} className={`w-1.5 h-1.5 rounded-full ${checkedItems[`${concept.id}-${i}`] ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700'}`} />
+                        ))}
+                      </div>
+                      <span className="text-[10px] font-black opacity-30 uppercase">{concept.tasks.length} sub-itens</span>
+                    </div>
+                  </button>
+                  <button onClick={(e) => { e.stopPropagation(); setShowSummary(showSummary === concept.id ? null : concept.id); }} className="absolute top-8 right-8 p-1 opacity-20 hover:opacity-100 transition-opacity">
+                    <Info size={20} />
+                  </button>
+                  {showSummary === concept.id && (
+                    <div className={`p-5 rounded-2xl mt-3 text-sm font-medium border-l-4 border-emerald-500 animate-in slide-in-from-top-4 ${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'}`}>
+                      {concept.summary}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {view === 'checklist' && (
+          <div className="space-y-8 pb-32">
+            <div className={`p-10 rounded-[48px] text-center ${darkMode ? 'bg-slate-900/60' : 'bg-slate-50'}`}>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] opacity-30 mb-4">Focus Mode</p>
+              <h2 className="text-2xl font-black leading-tight tracking-tight">{selectedConcept.text}</h2>
+            </div>
+
+            <div className="space-y-3">
+              {selectedConcept.tasks.map((task, idx) => {
+                const tid = `${selectedConcept.id}-${idx}`;
+                const isC = checkedItems[tid];
+                return (
+                  <div key={tid} onClick={() => toggleTask(tid, selectedConcept.id, selectedConcept.tasks, selectedChapter)} className={`group flex items-center gap-6 p-6 rounded-[32px] cursor-pointer transition-all border-2 ${isC ? (darkMode ? 'border-emerald-900/40 bg-emerald-950/20' : 'border-emerald-100 bg-emerald-50/40') : (darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-50 bg-white hover:border-slate-200')}`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isC ? 'bg-emerald-500 text-white scale-110' : 'border-2 border-slate-300 group-hover:border-emerald-400'}`}>
+                      {isC && <Check size={20} strokeWidth={4} />}
+                    </div>
+                    <span className={`text-lg transition-all ${isC ? 'line-through opacity-20 italic font-medium translate-x-4' : 'font-bold'}`}>{task}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </main>
+
+      <footer className={`fixed bottom-0 w-full p-4 border-t backdrop-blur-md ${darkMode ? 'bg-slate-950/80 border-slate-800' : 'bg-white/80 border-slate-100'}`}>
+        <p className="text-[8px] font-black tracking-[0.5em] opacity-20 text-center uppercase">Campbell Engineering • Optimized for Ouro Fino Session</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;

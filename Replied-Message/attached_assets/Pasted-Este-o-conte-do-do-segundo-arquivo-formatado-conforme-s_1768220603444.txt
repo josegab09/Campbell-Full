@@ -1,0 +1,152 @@
+Este é o conteúdo do segundo arquivo formatado conforme solicitaste. Podes copiar o texto abaixo e guardá-lo num ficheiro .txt:
+UNIDADE 2 - A CÉLULA
+Capítulo 6: Uma Viagem pela Célula
+As unidades fundamentais da vida
+CONCEITO 6.1: Para estudar as células, os biólogos utilizam microscópios e ferramentas da bioquímica
+Microscopia
+Fracionamento celular
+CONCEITO 6.2: Células eucarióticas possuem membranas internas que compartimentalizam suas funções
+Comparação entre células procarióticas e eucarióticas
+Uma visão panorâmica da célula eucariótica
+CONCEITO 6.3: As instruções genéticas das células eucarióticas são guardadas no núcleo e executadas pelos ribossomos
+O núcleo: central de informações
+Ribossomos: fábricas de proteínas
+CONCEITO 6.4: O sistema de endomembranas regula o tráfego de proteínas e realiza as funções metabólicas na célula
+O retículo endoplasmático: fábrica biossintética
+O aparelho de Golgi: centro de remessa e recepção
+Lisossomos: compartimentos de digestão
+Vacúolos: diversos compartimentos de manutenção
+O sistema de endomembranas: uma revisão
+CONCEITO 6.5: As mitocôndrias e os cloroplastos mudam a energia de uma forma para outra
+As origens evolutivas de mitocôndrias e cloroplastos
+Mitocôndrias: conversão de energia química
+Cloroplastos: captura de energia livre
+Peroxissomos: oxidação
+CONCEITO 6.6: O citoesqueleto é uma rede de fibras que organiza estruturas e atividades na célula
+Funções do citoesqueleto: suporte e motilidade
+Componentes do citoesqueleto
+CONCEITO 6.7: Os componentes extracelulares e as conexões entre as células ajudam a coordenar as atividades celulares
+Paredes celulares de plantas
+A matriz extracelular (MEC) de células animais
+Junções intercelulares
+A célula: unidade viva maior do que a soma das partes
+Capítulo 7: Estrutura e Função da Membrana
+A vida por um fio
+CONCEITO 7.1: As membranas celulares são mosaicos fluidos de lipídeos e de proteínas
+A fluidez das membranas
+Evolução das diferenças na composição lipídica das membranas
+Proteínas de membrana e suas funções
+O papel dos carboidratos da membrana no reconhecimento célula-célula
+Síntese e lateralidade das membranas
+CONCEITO 7.2: A estrutura da membrana resulta em permeabilidade seletiva
+A permeabilidade da bicamada lipídica
+Proteínas de transporte
+CONCEITO 7.3: O transporte passivo é a difusão de uma substância através da membrana sem gasto de energia
+Efeitos da osmose no balanço hídrico
+Difusão facilitada: transporte passivo auxiliado por proteínas
+CONCEITO 7.4: O transporte ativo usa energia para mover os solutos contra seus gradientes
+A necessidade de energia no transporte ativo
+Como a bomba de íons mantém o potencial da membrana
+Cotransporte: transporte acoplado a uma proteína de membrana
+CONCEITO 7.5: O transporte em massa através da membrana plasmática ocorre por exocitose e endocitose
+Exocitose
+Endocitose
+Capítulo 8: Introdução ao Metabolismo
+A energia da vida
+CONCEITO 8.1: O metabolismo de um organismo transforma matéria e energia de acordo com as leis da termodinâmica
+Organização da química da vida em rotas metabólicas
+Formas de energia
+As leis da transformação de energia
+CONCEITO 8.2: A variação de energia livre nos diz se a reação ocorre ou não espontaneamente
+Variação de energia livre, ΔG
+Energia livre, estabilidade e equilíbrio
+Energia livre e metabolismo
+CONCEITO 8.3: A molécula de ATP fornece energia para o trabalho celular acoplando reações exergônicas com reações endergônicas
+Estrutura e hidrólise do ATP
+Como a hidrólise do ATP realiza trabalho
+A regeneração do ATP
+CONCEITO 8.4: As enzimas aceleram as reações do metabolismo diminuindo as barreiras de energia
+A barreira de energia de ativação
+Como as enzimas aceleram reações
+Especificidade de substrato das enzimas
+Catálise no sítio ativo da enzima
+Efeito das condições locais na atividade enzimática
+Evolução das enzimas
+CONCEITO 8.5: A regulação da atividade enzimática ajuda o controle do metabolismo
+Regulação alostérica das enzimas
+Localização das enzimas no interior da célula
+Capítulo 9: Respiração Celular e Fermentação
+Vida é trabalho
+CONCEITO 9.1: Rotas catabólicas produzem energia oxidando combustíveis orgânicos
+Rotas catabólicas e produção de ATP
+Reações redox: oxidação e redução
+As fases da respiração celular: uma prévia
+CONCEITO 9.2: A glicólise obtém energia química oxidando glicose a piruvato
+CONCEITO 9.3: Após a oxidação do piruvato, o ciclo do ácido cítrico completa a oxidação que produz energia a partir de moléculas orgânicas
+Oxidação do piruvato a aceti-CoA
+O ciclo do ácido cítrico
+CONCEITO 9.4: Durante a fosforilação oxidativa, a quimiosmose acopla o transporte de elétrons à síntese de ATP
+A rota do transporte de elétrons
+Quimiosmose: o mecanismo acoplado de energia
+Um balanço da produção de ATP pela respiração celular
+CONCEITO 9.5: Fermentação e respiração anaeróbia capacitam as células a produzir ATP sem o uso de oxigênio
+Tipos de fermentação
+Comparação entre fermentação e respiração aeróbia e anaeróbia
+O significado evolutivo da glicólise
+CONCEITO 9.6: A glicólise e o ciclo do ácido cítrico conectam-se a diversas outras rotas metabólicas
+A versatilidade do catabolismo
+Biossíntese (rotas anabólicas)
+Regulação da respiração celular via mecanismos de retroalimentação
+Capítulo 10: Fotossíntese
+O processo que alimenta a biosfera
+CONCEITO 10.1: A fotossíntese converte a energia luminosa na energia química dos alimentos
+Cloroplastos: os locais da fotossíntese nos vegetais
+Rastreando átomos ao longo da fotossíntese: uma pesquisa científica
+As duas fases da fotossíntese: uma prévia
+CONCEITO 10.2: As reações luminosas convertem a energia solar na energia química do ATP e do NADPH
+A natureza da luz solar
+Pigmentos fotossintéticos: os receptores de luz
+Excitação da clorofila pela luz
+O fotossistema: um complexo do centro de reação associado aos complexos dos coletores de luz
+Fluxo linear de elétrons
+Fluxo cíclico de elétrons
+Comparação entre a quimiosmose nos cloroplastos e nas mitocôndrias
+CONCEITO 10.3: O ciclo de Calvin utiliza a energia química do ATP e do NADPH para reduzir CO2 em açúcar
+CONCEITO 10.4: Mecanismos alternativos de fixação do carbono evoluíram em climas áridos e quentes
+Fotorrespiração: um relicto evolutivo?
+Plantas C4
+Plantas MAC
+A importância da fotossíntese: uma revisão
+Capítulo 11: Comunicação Celular
+A rede celular
+CONCEITO 11.1: Sinais externos são convertidos em respostas dentro da célula
+Evolução da sinalização celular
+Sinalização local e de longa distância
+Os três estágios da sinalização celular: uma prévia
+CONCEITO 11.2: Recepção: uma molécula sinalizadora liga-se a uma proteína receptora, causando mudança na sua forma
+Os receptores na membrana plasmática
+Receptores intracelulares
+CONCEITO 11.3: Transdução: cascatas de interações moleculares transmitem sinais a partir dos receptores para moléculas-alvo na célula
+Rotas de transdução de sinal
+Fosforilação e desfosforilação proteica
+Pequenas moléculas e íons como segundos mensageiros
+CONCEITO 11.4: Resposta: a sinalização celular induz regulação da transcrição ou atividades citoplasmáticas
+Respostas nuclear e citoplasmáticas
+Regulação da resposta
+CONCEITO 11.5: Apoptose (morte celular programada) integra múltiplas rotas de sinalização celular
+Apoptose no verme de solo Caenorhabditis elegans
+Rotas apoptóticas e os sinais que as desencadeiam
+Capítulo 12: O Ciclo Celular
+Os papéis essenciais da divisão celular
+CONCEITO 12.1: A maioria das divisões celulares resulta em células-filhas geneticamente idênticas
+Organização celular do material genético
+Distribuição dos cromossomos durante a divisão da célula eucariótica
+CONCEITO 12.2: A fase mitótica alterna-se com a interfase no ciclo celular
+Fases do ciclo celular
+O fuso mitótico: uma visão mais próxima
+Citocinese: uma visão mais detalhada
+Fissão binária
+A evolução da mitose
+CONCEITO 12.3: O ciclo celular eucariótico é regulado por um sistema de controle molecular
+O sistema de controle do ciclo celular
+Perda dos controlos do ciclo celular nas células cancerígenas

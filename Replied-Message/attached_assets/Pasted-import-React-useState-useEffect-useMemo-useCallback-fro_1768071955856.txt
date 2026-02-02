@@ -1,0 +1,463 @@
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { 
+  CheckCircle2, 
+  Circle, 
+  ChevronRight, 
+  ArrowLeft,
+  BookOpen, 
+  Layers, 
+  Info, 
+  Moon, 
+  Sun,
+  Trophy,
+  Check
+} from 'lucide-react';
+
+// --- CONFIGURAÇÃO DE DATA (UNIDADES 1 A 8 COMPLETAS) ---
+const CAMPBELL_DATA = [
+  {
+    id: 'u1',
+    title: 'UNIDADE 1: A QUÍMICA DA VIDA',
+    color: 'blue',
+    chapters: [
+      {
+        id: 'c1',
+        title: 'Capítulo 1: Evolução, Temas da Biologia e Pesquisa Científica',
+        concepts: [
+          { id: '1.1', text: 'Conceito 1.1: O estudo da vida revela temas comuns', summary: 'Exploração dos pilares que conectam todos os seres vivos.', tasks: ['Tema: Novas propriedades emergem em cada nível', 'Tema: Expressão e transmissão de informação genética', 'Tema: Transferência e transformação de energia e matéria', 'Tema: Interações fundamentais nos sistemas biológicos', 'Evolução, o tema central da biologia'] },
+          { id: '1.2', text: 'Conceito 1.2: A evolução e a diversidade da vida', summary: 'A base teórica de Darwin e a classificação dos domínios.', tasks: ['Classificando a diversidade da vida', 'Charles Darwin e a seleção natural', 'A árvore da vida'] }
+        ]
+      },
+      {
+        id: 'c2',
+        title: 'Capítulo 2: O Contexto Químico da Vida',
+        concepts: [
+          { id: '2.1', text: 'Conceito 2.1: Matéria, Elementos e Compostos', summary: 'Fundamentos da matéria.', tasks: ['Elementos e compostos', 'Os elementos da vida', 'Estudo de caso: tolerância a elementos tóxicos'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u3',
+    title: 'UNIDADE 3: GENÉTICA',
+    color: 'purple',
+    chapters: [
+      {
+        id: 'c13',
+        title: 'Capítulo 13: Meiose e Ciclos de Vida Sexuada',
+        concepts: [
+          { id: '13.1', text: 'Conceito 13.1: Genes e Herança Cromossômica', tasks: ['Herança de genes', 'Comparação assexuada vs sexuada'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u4',
+    title: 'UNIDADE 4: MECANISMOS DA EVOLUÇÃO',
+    color: 'orange',
+    chapters: [
+      {
+        id: 'c22',
+        title: 'Capítulo 22: Descendência com Modificação',
+        concepts: [
+          { id: '22.1', text: 'Conceito 22.1: Revolução Darwiniana', tasks: ['Scala naturae e classificação', 'Ideias sobre mudança no tempo', 'Hipótese de Lamarck'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u5',
+    title: 'UNIDADE 5: HISTÓRIA EVOLUTIVA DA DIVERSIDADE',
+    color: 'teal',
+    chapters: [
+      {
+        id: 'c26',
+        title: 'Capítulo 26: Filogenia e Árvore da Vida',
+        concepts: [
+          { id: '26.1', text: 'Conceito 26.1: Relações Evolutivas', tasks: ['Nomenclatura binomial', 'Classificação hierárquica', 'Unindo classificação e filogenia'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u6',
+    title: 'UNIDADE 6: FORMA E FUNÇÃO DAS PLANTAS',
+    color: 'lime',
+    chapters: [
+      {
+        id: 'c35',
+        title: 'Capítulo 35: Estrutura, Crescimento e Desenvolvimento',
+        concepts: [
+          { id: '35.1', text: 'Conceito 35.1: Organização Hierárquica', summary: 'A estrutura vegetal em órgãos, tecidos e células.', tasks: ['Os três órgãos básicos: raízes, caules e folhas', 'Sistemas de tecidos dérmicos, vasculares e fundamentais', 'Tipos comuns de células vegetais'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u7',
+    title: 'UNIDADE 7: FORMA E FUNÇÃO DOS ANIMAIS',
+    color: 'indigo',
+    chapters: [
+      {
+        id: 'c40',
+        title: 'Capítulo 40: Princípios Básicos da Forma e Função',
+        concepts: [
+          { id: '40.1', text: 'Conceito 40.1: Correlação Forma e Função', summary: 'Evolução do tamanho, trocas com o ambiente e organização hierárquica.', tasks: ['Evolução do tamanho e da forma', 'Troca com o ambiente', 'Organização hierárquica de planos corporais', 'Coordenação e controle'] },
+          { id: '40.2', text: 'Conceito 40.2: Controle por Retroalimentação', summary: 'Manutenção do ambiente interno e homeostase.', tasks: ['Regulação e conformação', 'Homeostase'] },
+          { id: '40.3', text: 'Conceito 40.3: Termorregulação', summary: 'Endotermia, ectotermia e equilíbrio de calor.', tasks: ['Endotermia e ectotermia', 'Variação na temperatura do corpo', 'Equilibrando perda e ganho de calor', 'Aclimação na termorregulação', 'Termostatos fisiológicos e febre'] },
+          { id: '40.4', text: 'Conceito 40.4: Necessidades de Energia', summary: 'Relação entre taxa metabólica, tamanho e ambiente.', tasks: ['Alocação e uso de energia', 'Quantificando o uso de energia', 'Taxa metabólica mínima', 'Influências na taxa metabólica', 'Torpor e conservação de energia'] }
+        ]
+      },
+      {
+        id: 'c41',
+        title: 'Capítulo 41: Nutrição Animal',
+        concepts: [
+          { id: '41.1', text: 'Conceito 41.1: Dieta e Nutrientes Essenciais', summary: 'Suprimento de energia química e moléculas orgânicas.', tasks: ['Nutrientes essenciais', 'Deficiências alimentares', 'Avaliando necessidades nutricionais'] },
+          { id: '41.3', text: 'Conceito 41.3: Sistema Digestório de Mamíferos', tasks: ['Cavidade oral, faringe e esôfago', 'Digestão no estômago', 'Digestão no intestino delgado', 'Absorção no intestino delgado', 'Processamento no intestino grosso'] }
+        ]
+      },
+      {
+        id: 'c42',
+        title: 'Capítulo 42: Circulação e Trocas Gasosas',
+        concepts: [
+          { id: '42.1', text: 'Conceito 42.1: Sistemas Circulatórios', tasks: ['Cavidades gastrovasculares', 'Sistemas abertos e fechados', 'Organização em vertebrados'] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u8',
+    title: 'UNIDADE 8: ECOLOGIA',
+    color: 'rose',
+    chapters: [
+      {
+        id: 'c52',
+        title: 'Capítulo 52: Introdução à Ecologia e à Biosfera',
+        concepts: [
+          { id: '52.1', text: 'Conceito 52.1: Variabilidade e Mudança Climática', summary: 'O clima da Terra varia com a latitude e a estação.', tasks: ['Padrões climáticos globais', 'Efeitos regionais e locais no clima', 'Microclima', 'Mudança climática global'] },
+          { id: '52.2', text: 'Conceito 52.2: Biomas Terrestres', summary: 'Distribuição controlada pelo clima e perturbações.', tasks: ['Clima e biomas terrestres', 'Características gerais', 'Perturbações e biomas'] },
+          { id: '52.3', text: 'Conceito 52.3: Biomas Aquáticos', summary: 'Sistemas diversos e dinâmicos.', tasks: ['Zoneação dos biomas aquáticos'] },
+          { id: '52.4', text: 'Conceito 52.4: Distribuição das Espécies', summary: 'Interações que limitam a dispersão.', tasks: ['Dispersão e distribuição', 'Comportamento e seleção de hábitat', 'Fatores bióticos', 'Fatores abióticos'] }
+        ]
+      },
+      {
+        id: 'c53',
+        title: 'Capítulo 53: Ecologia de Populações',
+        concepts: [
+          { id: '53.1', text: 'Conceito 53.1: Densidade e Demografia', summary: 'Processos biológicos que influenciam as populações.', tasks: ['Densidade e dispersão', 'Demografia'] },
+          { id: '53.2', text: 'Conceito 53.2: Modelo Exponencial', summary: 'Crescimento em ambientes idealizados e ilimitados.', tasks: ['Taxa de crescimento per capita', 'Crescimento exponencial'] },
+          { id: '53.3', text: 'Conceito 53.3: Modelo Logístico', summary: 'Crescimento e capacidade de suporte.', tasks: ['Modelo de crescimento logístico', 'Modelo logístico e populações reais'] },
+          { id: '53.4', text: 'Conceito 53.4: História de Vida', summary: 'Características como produtos da seleção natural.', tasks: ['Evolução e diversidade da história de vida', 'Compensações (trade-offs) e histórias de vida'] },
+          { id: '53.5', text: 'Conceito 53.5: Regulação do Crescimento', summary: 'Fatores dependentes e independentes da densidade.', tasks: ['Mudança e densidade populacional', 'Mecanismos de regulação dependente', 'Dinâmica populacional'] },
+          { id: '53.6', text: 'Conceito 53.6: População Humana', summary: 'Crescimento global e capacidade de suporte.', tasks: ['População humana global', 'Capacidade de suporte global'] }
+        ]
+      },
+      {
+        id: 'c54',
+        title: 'Capítulo 54: Ecologia de Comunidades',
+        concepts: [
+          { id: '54.1', text: 'Conceito 54.1: Interações de Comunidades', summary: 'Classificação dos efeitos entre espécies.', tasks: ['Competição', 'Predação', 'Herbivoria', 'Simbiose', 'Facilitação'] },
+          { id: '54.2', text: 'Conceito 54.2: Diversidade e Estrutura Trófica', summary: 'Estabilidade e espécies com grande impacto.', tasks: ['Diversidade de espécies', 'Diversidade e estabilidade', 'Estrutura trófica', 'Espécies com grande impacto', 'Controles bottom-up e top-down'] },
+          { id: '54.3', text: 'Conceito 54.3: Influência do Distúrbio', summary: 'Sucessão ecológica e ações antrópicas.', tasks: ['Caracterização dos distúrbios', 'Sucessão ecológica', 'Distúrbio por ações antrópicas'] },
+          { id: '54.4', text: 'Conceito 54.4: Fatores Biogeográficos', summary: 'Gradientes latitudinais e efeitos de área.', tasks: ['Gradientes latitudinais', 'Efeitos de área', 'Modelo do equilíbrio de ilhas'] },
+          { id: '54.5', text: 'Conceito 54.5: Patógenos e Estrutura', summary: 'Como agentes infecciosos alteram comunidades.', tasks: ['Patógenos e estrutura de comunidades locais e globais'] }
+        ]
+      }
+    ]
+  }
+];
+
+// --- SISTEMA DE ÁUDIO ---
+const playSound = (type) => {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.08;
+    masterGain.connect(audioCtx.destination);
+
+    if (type === 'pop') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      osc.connect(gain); gain.connect(masterGain);
+      osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+    } else if (type === 'triumph') {
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + i * 0.1);
+        gain.gain.setValueAtTime(0, audioCtx.currentTime + i * 0.1);
+        gain.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + i * 0.1 + 0.05);
+        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + i * 0.1 + 0.3);
+        osc.connect(gain); gain.connect(masterGain);
+        osc.start(audioCtx.currentTime + i * 0.1);
+        osc.stop(audioCtx.currentTime + i * 0.1 + 0.4);
+      });
+    }
+  } catch (e) {}
+};
+
+const App = () => {
+  const [view, setView] = useState('units');
+  const [darkMode, setDarkMode] = useState(false);
+  const [checkedItems, setCheckedItems] = useState({});
+  const [selectedUnit, setSelectedUnit] = useState(null);
+  const [selectedChapter, setSelectedChapter] = useState(null);
+  const [selectedConcept, setSelectedConcept] = useState(null);
+  const [showSummary, setShowSummary] = useState(null);
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('campbell_v7_complete');
+    if (saved) setCheckedItems(JSON.parse(saved));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('campbell_v7_complete', JSON.stringify(checkedItems));
+  }, [checkedItems]);
+
+  const handleBack = () => {
+    if (view === 'checklist') setView('concepts');
+    else if (view === 'concepts') setView('chapters');
+    else if (view === 'chapters') setView('units');
+  };
+
+  const isConceptComplete = useCallback((conceptId, tasks) => {
+    return tasks.every((_, idx) => checkedItems[`${conceptId}-${idx}`]);
+  }, [checkedItems]);
+
+  const isChapterComplete = useCallback((chapter) => {
+    return chapter.concepts.every(c => isConceptComplete(c.id, c.tasks));
+  }, [checkedItems, isConceptComplete]);
+
+  const triggerConfetti = () => {
+    const newParticles = Array.from({ length: 25 }).map((_, i) => ({
+      id: Date.now() + i,
+      x: Math.random() * 100,
+      color: ['#3b82f6', '#10b981', '#a855f7', '#f97316', '#6366f1', '#e11d48'][Math.floor(Math.random() * 6)],
+      delay: Math.random() * 0.5
+    }));
+    setParticles(newParticles);
+    setTimeout(() => setParticles([]), 2500);
+  };
+
+  const toggleTask = (taskId, conceptId, tasks, chapter) => {
+    const wasComplete = isConceptComplete(conceptId, tasks);
+    const wasChapterComplete = isChapterComplete(chapter);
+
+    setCheckedItems(prev => {
+      const newState = { ...prev, [taskId]: !prev[taskId] };
+      playSound('pop');
+      
+      const isNowComplete = tasks.every((_, idx) => newState[`${conceptId}-${idx}`]);
+      if (isNowComplete && !wasComplete) triggerConfetti();
+
+      const isNowChapterComplete = chapter.concepts.every(c => 
+        c.tasks.every((_, idx) => newState[`${c.id}-${idx}`])
+      );
+      if (isNowChapterComplete && !wasChapterComplete) playSound('triumph');
+
+      return newState;
+    });
+  };
+
+  const currentProgress = useMemo(() => {
+    let total = 0, completed = 0;
+    const iterate = (arr) => {
+      arr.forEach(u => {
+        const chapters = u.chapters || [u];
+        chapters.forEach(ch => {
+          const concepts = ch.concepts || [ch];
+          concepts.forEach(co => {
+            co.tasks.forEach((_, idx) => {
+              total++;
+              if (checkedItems[`${co.id}-${idx}`]) completed++;
+            });
+          });
+        });
+      });
+    };
+    
+    if (view === 'units') iterate(CAMPBELL_DATA);
+    else if (view === 'chapters') iterate([selectedUnit]);
+    else if (view === 'concepts') iterate([{ chapters: [selectedChapter] }]);
+    else if (view === 'checklist') iterate([{ chapters: [{ concepts: [selectedConcept] }] }]);
+
+    return total > 0 ? Math.round((completed / total) * 100) : 0;
+  }, [view, selectedUnit, selectedChapter, selectedConcept, checkedItems]);
+
+  const unitColors = {
+    blue: { bg: 'bg-blue-50', text: 'text-blue-600', accent: '#3b82f6' },
+    emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', accent: '#10b981' },
+    purple: { bg: 'bg-purple-50', text: 'text-purple-600', accent: '#a855f7' },
+    orange: { bg: 'bg-orange-50', text: 'text-orange-600', accent: '#f97316' },
+    teal: { bg: 'bg-teal-50', text: 'text-teal-600', accent: '#14b8a6' },
+    lime: { bg: 'bg-lime-50', text: 'text-lime-600', accent: '#84cc16' },
+    indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', accent: '#6366f1' },
+    rose: { bg: 'bg-rose-50', text: 'text-rose-600', accent: '#e11d48' }
+  };
+
+  const activeColor = selectedUnit ? unitColors[selectedUnit.color] : unitColors.blue;
+
+  return (
+    <div className={`min-h-screen font-sans transition-colors duration-500 ${darkMode ? 'bg-[#0a0f1e] text-slate-100' : 'bg-white text-slate-900'}`}>
+      
+      {/* CONFETTI */}
+      <div className="fixed inset-0 pointer-events-none z-[100]">
+        {particles.map(p => (
+          <div key={p.id} className="absolute w-2 h-4 rounded-sm animate-bounce" style={{ left: `${p.x}%`, top: '-20px', backgroundColor: p.color, animation: `fall 2.5s ease-in forwards`, animationDelay: `${p.delay}s` }} />
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes fall { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+        .p-bar { transition: width 1s cubic-bezier(0.23, 1, 0.32, 1); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); }
+      `}</style>
+
+      {/* NAV */}
+      <header className={`sticky top-0 z-50 p-6 border-b backdrop-blur-xl ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-white/60 border-slate-100'}`}>
+        <div className="max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-4">
+              {view !== 'units' && (
+                <button onClick={handleBack} className="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+                  <ArrowLeft size={20} />
+                </button>
+              )}
+              <h1 className="font-black text-xl tracking-tighter uppercase italic text-rose-500">Campbell</h1>
+            </div>
+            <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+              {darkMode ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-slate-400" />}
+            </button>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex justify-between items-end text-[9px] font-black uppercase tracking-[0.2em] opacity-40">
+              <span>{view === 'units' ? 'Global Progress' : selectedUnit?.title.split(':')[0]}</span>
+              <span>{currentProgress}%</span>
+            </div>
+            <div className={`w-full h-1 rounded-full ${darkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
+              <div className="h-full p-bar rounded-full" style={{ width: `${currentProgress}%`, backgroundColor: activeColor.accent }} />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-2xl mx-auto p-6 space-y-6 animate-in fade-in duration-700">
+        
+        {view === 'units' && (
+          <div className="grid gap-4">
+            {CAMPBELL_DATA.map(unit => (
+              <button key={unit.id} onClick={() => { setSelectedUnit(unit); setView('chapters'); }} className={`group p-6 rounded-[32px] border-2 transition-all duration-500 text-left ${darkMode ? 'border-slate-800 bg-slate-900/40' : 'border-slate-50 bg-slate-50 hover:bg-white hover:border-slate-200 hover:shadow-2xl hover:-translate-y-1'}`}>
+                <div className="flex items-center gap-6">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-xl ${unit.color === 'blue' ? 'bg-blue-500' : unit.color === 'emerald' ? 'bg-emerald-500' : unit.color === 'purple' ? 'bg-purple-500' : unit.color === 'orange' ? 'bg-orange-500' : unit.color === 'teal' ? 'bg-teal-500' : unit.color === 'lime' ? 'bg-lime-500' : unit.color === 'indigo' ? 'bg-indigo-500' : 'bg-rose-500'}`}>
+                    <Layers size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[10px] font-black opacity-30 uppercase tracking-widest">{unit.id}</p>
+                    <h2 className="text-lg font-bold tracking-tight">{unit.title.split(': ')[1]}</h2>
+                  </div>
+                  <ChevronRight size={20} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {view === 'chapters' && (
+          <div className="space-y-4">
+            <h2 className={`text-[10px] font-black uppercase tracking-widest opacity-40 mb-8`}>{selectedUnit.title}</h2>
+            {selectedUnit.chapters.map(chapter => {
+              const done = isChapterComplete(chapter);
+              return (
+                <button key={chapter.id} onClick={() => { setSelectedChapter(chapter); setView('concepts'); }} className={`w-full p-6 flex items-center justify-between rounded-3xl border transition-all ${darkMode ? 'border-slate-800 bg-slate-900/40' : 'border-slate-100 bg-white hover:shadow-lg'}`}>
+                  <div className="flex items-center gap-5">
+                    <div className={`w-10 h-10 rounded-2xl flex items-center justify-center font-black text-sm ${done ? 'bg-emerald-500 text-white' : (darkMode ? 'bg-slate-800' : 'bg-slate-50 text-slate-400')}`}>
+                      {done ? <Check size={20} strokeWidth={4} /> : chapter.id.replace('c', '')}
+                    </div>
+                    <span className="font-bold text-lg">{chapter.title.split(': ')[1]}</span>
+                  </div>
+                  <ChevronRight size={18} className="opacity-20" />
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {view === 'concepts' && (
+          <div className="space-y-4 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+            <h2 className="text-[10px] font-black uppercase tracking-widest opacity-40 mb-8">{selectedChapter.title}</h2>
+            {selectedChapter.concepts.map(concept => {
+              const done = isConceptComplete(concept.id, concept.tasks);
+              return (
+                <div key={concept.id} className="relative group mb-4">
+                  <button onClick={() => { setSelectedConcept(concept); setView('checklist'); }} className={`w-full p-8 rounded-[40px] border-2 transition-all text-left ${darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-50 bg-white hover:border-slate-200'} ${done ? 'border-emerald-500/40 bg-emerald-50/5 dark:bg-emerald-950/5' : ''}`}>
+                    <div className="flex items-start justify-between">
+                      <h3 className={`font-extrabold text-lg leading-tight flex-1 pr-12 ${done ? 'text-emerald-600' : ''}`}>{concept.text}</h3>
+                      {done ? <Trophy size={24} className="text-emerald-500" /> : <ChevronRight size={24} className="opacity-10" />}
+                    </div>
+                    <div className="mt-6 flex items-center gap-3">
+                      <div className="flex gap-1">
+                        {concept.tasks.map((_, i) => (
+                          <div key={i} className={`w-1.5 h-1.5 rounded-full ${checkedItems[`${concept.id}-${i}`] ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700'}`} />
+                        ))}
+                      </div>
+                      <span className="text-[10px] font-black opacity-30 uppercase">{concept.tasks.length} sub-itens</span>
+                    </div>
+                  </button>
+                  <button onClick={(e) => { e.stopPropagation(); setShowSummary(showSummary === concept.id ? null : concept.id); }} className="absolute top-8 right-8 p-1 opacity-20 hover:opacity-100 transition-opacity">
+                    <Info size={20} />
+                  </button>
+                  {showSummary === concept.id && (
+                    <div className={`p-5 rounded-2xl mt-3 text-sm font-medium border-l-4 border-emerald-500 animate-in slide-in-from-top-4 ${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'}`}>
+                      {concept.summary}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {view === 'checklist' && (
+          <div className="space-y-8 pb-32">
+            <div className={`p-10 rounded-[48px] text-center ${darkMode ? 'bg-slate-900/60' : 'bg-slate-50'}`}>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] opacity-30 mb-4">Focus Mode</p>
+              <h2 className="text-2xl font-black leading-tight tracking-tight">{selectedConcept.text}</h2>
+            </div>
+
+            <div className="space-y-3">
+              {selectedConcept.tasks.map((task, idx) => {
+                const tid = `${selectedConcept.id}-${idx}`;
+                const isC = checkedItems[tid];
+                return (
+                  <div key={tid} onClick={() => toggleTask(tid, selectedConcept.id, selectedConcept.tasks, selectedChapter)} className={`group flex items-center gap-6 p-6 rounded-[32px] cursor-pointer transition-all border-2 ${isC ? (darkMode ? 'border-emerald-900/40 bg-emerald-950/20' : 'border-emerald-100 bg-emerald-50/40') : (darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-50 bg-white hover:border-slate-200')}`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isC ? 'bg-emerald-500 text-white scale-110' : 'border-2 border-slate-300 group-hover:border-emerald-400'}`}>
+                      {isC && <Check size={20} strokeWidth={4} />}
+                    </div>
+                    <span className={`text-lg transition-all ${isC ? 'line-through opacity-20 italic font-medium translate-x-4' : 'font-bold'}`}>{task}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </main>
+
+      <footer className={`fixed bottom-0 w-full p-4 border-t backdrop-blur-md ${darkMode ? 'bg-slate-950/80 border-slate-800' : 'bg-white/80 border-slate-100'}`}>
+        <p className="text-[8px] font-black tracking-[0.5em] opacity-20 text-center uppercase">Campbell Engineering • Optimized for Ouro Fino Session</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;

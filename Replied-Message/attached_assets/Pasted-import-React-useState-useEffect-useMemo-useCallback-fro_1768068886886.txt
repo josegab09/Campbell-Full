@@ -1,0 +1,500 @@
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { 
+  CheckCircle2, 
+  Circle, 
+  ChevronRight, 
+  ArrowLeft,
+  BookOpen, 
+  Layers, 
+  Info, 
+  Moon, 
+  Sun,
+  Trophy,
+  Check
+} from 'lucide-react';
+
+// --- CONFIGURAÇÃO DE DADOS (ARQUITETURA RELACIONAL) ---
+const CAMPBELL_DATA = [
+  {
+    id: 'u1',
+    title: 'UNIDADE 1: A QUÍMICA DA VIDA',
+    color: 'blue',
+    chapters: [
+      {
+        id: 'c2',
+        title: 'Capítulo 2: Contexto Químico da Vida',
+        concepts: [
+          { 
+            id: '2.1', 
+            text: 'Conceito 2.1: Matéria consiste em elementos químicos em forma pura e em combinações', 
+            summary: 'O estudo dos elementos essenciais e oligoelementos fundamentais.',
+            tasks: ['Elementos Essenciais', 'Oligoelementos', 'Compostos e Misturas'] 
+          },
+          { 
+            id: '2.3', 
+            text: 'Conceito 2.3: A formação e a função das moléculas dependem das ligações químicas', 
+            summary: 'Ligações covalentes, iônicas e interações fracas (Van der Waals).',
+            tasks: ['Ligações Covalentes', 'Ligações Iônicas', 'Pontes de Hidrogênio', 'Forma e Função Molecular'] 
+          }
+        ]
+      },
+      {
+        id: 'c5',
+        title: 'Capítulo 5: Estrutura e Função de Grandes Moléculas Biológicas',
+        concepts: [
+          { 
+            id: '5.4', 
+            text: 'Conceito 5.4: Proteínas incluem uma diversidade de estruturas', 
+            summary: 'Estruturas primária, secundária, terciária e quaternária.',
+            tasks: ['Aminoácidos e Polipeptídeos', 'Estrutura Primária', 'Estrutura Secundária', 'Estrutura Terciária', 'Estrutura Quaternária', 'Desnaturação Proteica'] 
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u2',
+    title: 'UNIDADE 2: A CÉLULA',
+    color: 'emerald',
+    chapters: [
+      {
+        id: 'c6',
+        title: 'Capítulo 6: Um Passeio pela Célula',
+        concepts: [
+          { 
+            id: '6.4', 
+            text: 'Conceito 6.4: O sistema de endomembranas regula o tráfego de proteínas', 
+            summary: 'RE, Golgi, Lisossomos e Vacúolos.',
+            tasks: ['Retículo Endoplasmático Liso', 'Retículo Endoplasmático Rugoso', 'Complexo de Golgi', 'Lisossomos', 'Vacúolos'] 
+          }
+        ]
+      },
+      {
+        id: 'c8',
+        title: 'Capítulo 8: Introdução ao Metabolismo',
+        concepts: [
+          { 
+            id: '8.3', 
+            text: 'Conceito 8.3: O ATP impulsiona o trabalho celular ao acoplar reações', 
+            summary: 'O papel do trifosfato de adenosina no trabalho mecânico e químico.',
+            tasks: ['Estrutura do ATP', 'Hidrólise de ATP', 'Fosforilação', 'Regeneração de ATP'] 
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u3',
+    title: 'UNIDADE 3: GENÉTICA',
+    color: 'purple',
+    chapters: [
+      {
+        id: 'c12',
+        title: 'Capítulo 12: O Ciclo Celular',
+        concepts: [
+          { 
+            id: '12.2', 
+            text: 'Conceito 12.2: O ciclo celular consiste na fase mitótica e na interfase', 
+            summary: 'As fases G1, S, G2 e os estágios da mitose.',
+            tasks: ['Interfase (G1, S, G2)', 'Prófase', 'Metáfase', 'Anáfase', 'Telófase', 'Citocinese'] 
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'u4',
+    title: 'UNIDADE 4: MECANISMOS DA EVOLUÇÃO',
+    color: 'orange',
+    chapters: [
+      {
+        id: 'c22',
+        title: 'Capítulo 22: Descendência com Modificação',
+        concepts: [
+          { 
+            id: '22.2', 
+            text: 'Conceito 22.2: A seleção natural explica as adaptações dos organismos', 
+            summary: 'Observações de Darwin e o conceito de adaptação evolutiva.',
+            tasks: ['Observação 1: Variação', 'Observação 2: Superprodução', 'Evidências Diretas da Evolução'] 
+          }
+        ]
+      }
+    ]
+  }
+];
+
+// --- SISTEMA DE ÁUDIO SINTETIZADO ---
+const playSound = (type) => {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.1;
+    masterGain.connect(audioCtx.destination);
+
+    if (type === 'pop') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      osc.connect(gain);
+      gain.connect(masterGain);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.1);
+    } else if (type === 'triumph') {
+      const notes = [523.25, 659.25, 783.99, 1046.50]; // Arpejo Dó Maior
+      notes.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + i * 0.1);
+        gain.gain.setValueAtTime(0, audioCtx.currentTime + i * 0.1);
+        gain.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + i * 0.1 + 0.05);
+        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + i * 0.1 + 0.3);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(audioCtx.currentTime + i * 0.1);
+        osc.stop(audioCtx.currentTime + i * 0.1 + 0.4);
+      });
+    }
+  } catch (e) {
+    console.warn("Audio Context falhou:", e);
+  }
+};
+
+const App = () => {
+  const [view, setView] = useState('units'); // units, chapters, concepts, checklist
+  const [darkMode, setDarkMode] = useState(false);
+  const [checkedItems, setCheckedItems] = useState({});
+  const [selectedUnit, setSelectedUnit] = useState(null);
+  const [selectedChapter, setSelectedChapter] = useState(null);
+  const [selectedConcept, setSelectedConcept] = useState(null);
+  const [showSummary, setShowSummary] = useState(null);
+  const [particles, setParticles] = useState([]);
+
+  // Persistência
+  useEffect(() => {
+    const saved = localStorage.getItem('campbell_v3_premium');
+    if (saved) setCheckedItems(JSON.parse(saved));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('campbell_v3_premium', JSON.stringify(checkedItems));
+  }, [checkedItems]);
+
+  // --- LÓGICA DE NAVEGAÇÃO ---
+  const handleBack = () => {
+    if (view === 'checklist') setView('concepts');
+    else if (view === 'concepts') setView('chapters');
+    else if (view === 'chapters') setView('units');
+  };
+
+  const isConceptComplete = useCallback((conceptId, tasks) => {
+    return tasks.every((_, idx) => checkedItems[`${conceptId}-${idx}`]);
+  }, [checkedItems]);
+
+  const isChapterComplete = useCallback((chapter) => {
+    return chapter.concepts.every(c => isConceptComplete(c.id, c.tasks));
+  }, [checkedItems, isConceptComplete]);
+
+  // Animação de Confetes
+  const triggerConfetti = () => {
+    const newParticles = Array.from({ length: 20 }).map((_, i) => ({
+      id: Date.now() + i,
+      x: Math.random() * 100,
+      y: 0,
+      color: ['#3b82f6', '#10b981', '#a855f7', '#f97316'][Math.floor(Math.random() * 4)],
+      delay: Math.random() * 0.5
+    }));
+    setParticles(newParticles);
+    setTimeout(() => setParticles([]), 2000);
+  };
+
+  const toggleTask = (taskId, conceptId, tasks, chapter) => {
+    const wasComplete = isConceptComplete(conceptId, tasks);
+    const wasChapterComplete = isChapterComplete(chapter);
+
+    setCheckedItems(prev => {
+      const newState = { ...prev, [taskId]: !prev[taskId] };
+      
+      // Feedback Auditivo
+      playSound('pop');
+
+      // Feedback Visual de Conclusão de Conceito
+      const isNowComplete = tasks.every((_, idx) => newState[`${conceptId}-${idx}`]);
+      if (isNowComplete && !wasComplete) {
+        triggerConfetti();
+      }
+
+      // Feedback de Conclusão de Capítulo
+      const isNowChapterComplete = chapter.concepts.every(c => 
+        c.tasks.every((_, idx) => newState[`${c.id}-${idx}`])
+      );
+      if (isNowChapterComplete && !wasChapterComplete) {
+        playSound('triumph');
+      }
+
+      return newState;
+    });
+  };
+
+  // --- CÁLCULO DE PROGRESSO ---
+  const currentProgress = useMemo(() => {
+    let total = 0, completed = 0;
+    const target = view === 'units' ? CAMPBELL_DATA : 
+                   view === 'chapters' ? [selectedUnit] :
+                   view === 'concepts' ? [selectedChapter] : 
+                   [{ concepts: [selectedConcept] }];
+
+    const iterate = (arr) => {
+      arr.forEach(u => {
+        const chapters = u.chapters || [u];
+        chapters.forEach(ch => {
+          const concepts = ch.concepts || [ch];
+          concepts.forEach(co => {
+            co.tasks.forEach((_, idx) => {
+              total++;
+              if (checkedItems[`${co.id}-${idx}`]) completed++;
+            });
+          });
+        });
+      });
+    };
+    
+    if (view === 'units') iterate(CAMPBELL_DATA);
+    else if (view === 'chapters') iterate([selectedUnit]);
+    else if (view === 'concepts') iterate([{ chapters: [selectedChapter] }]);
+    else if (view === 'checklist') iterate([{ chapters: [{ concepts: [selectedConcept] }] }]);
+
+    return total > 0 ? Math.round((completed / total) * 100) : 0;
+  }, [view, selectedUnit, selectedChapter, selectedConcept, checkedItems]);
+
+  // Cores dinâmicas baseadas na unidade
+  const unitColors = {
+    blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-600', hover: 'hover:bg-blue-100', dark: 'bg-blue-950/20' },
+    emerald: { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-600', hover: 'hover:bg-emerald-100', dark: 'bg-emerald-950/20' },
+    purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-600', hover: 'hover:bg-purple-100', dark: 'bg-purple-950/20' },
+    orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-600', hover: 'hover:bg-orange-100', dark: 'bg-orange-950/20' },
+  };
+
+  const activeColor = selectedUnit ? unitColors[selectedUnit.color] : unitColors.blue;
+
+  return (
+    <div className={`min-h-screen font-sans transition-colors duration-500 ${darkMode ? 'bg-[#0f172a] text-slate-100' : 'bg-white text-slate-900'}`}>
+      
+      {/* PARTICLES OVERLAY */}
+      <div className="fixed inset-0 pointer-events-none z-[100] overflow-hidden">
+        {particles.map(p => (
+          <div 
+            key={p.id}
+            className="absolute w-2 h-2 rounded-full animate-bounce"
+            style={{ 
+              left: `${p.x}%`, 
+              top: '-10px', 
+              backgroundColor: p.color,
+              animation: `fall 2s ease-in forwards`,
+              animationDelay: `${p.delay}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes fall {
+          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        .progress-transition { transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+      `}</style>
+
+      {/* HEADER PREMIUM */}
+      <header className={`sticky top-0 z-50 p-6 border-b backdrop-blur-md ${darkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-100'}`}>
+        <div className="max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              {view !== 'units' ? (
+                <button onClick={handleBack} className={`p-2 rounded-full transition-colors ${darkMode ? 'hover:bg-slate-800' : 'hover:bg-slate-100'}`}>
+                  <ArrowLeft size={20} />
+                </button>
+              ) : (
+                <div className="p-2 bg-slate-900 dark:bg-emerald-600 rounded-lg text-white">
+                  <BookOpen size={20} />
+                </div>
+              )}
+              <h1 className="font-extrabold tracking-tight text-xl uppercase tracking-widest">Campbell</h1>
+            </div>
+            <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              {darkMode ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-slate-400" />}
+            </button>
+          </div>
+
+          {/* PROGRESS BAR FLUIDA */}
+          <div className="space-y-2">
+            <div className="flex justify-between items-end text-[10px] font-black uppercase tracking-[0.2em] opacity-50">
+              <span>{view === 'units' ? 'Progresso Total' : selectedUnit?.title.split(':')[0]}</span>
+              <span>{currentProgress}%</span>
+            </div>
+            <div className={`w-full h-1.5 rounded-full overflow-hidden ${darkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
+              <div 
+                className={`h-full progress-transition ${selectedUnit ? `bg-${selectedUnit.color}-500` : 'bg-slate-900'}`}
+                style={{ width: `${currentProgress}%`, backgroundColor: selectedUnit ? (selectedUnit.color === 'emerald' ? '#10b981' : selectedUnit.color === 'blue' ? '#3b82f6' : selectedUnit.color === 'purple' ? '#a855f7' : '#f97316') : undefined }}
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-2xl mx-auto p-6 space-y-8 animate-in fade-in duration-500">
+        
+        {/* VIEW 1: UNIDADES (DASHBOARD) */}
+        {view === 'units' && (
+          <div className="grid gap-4">
+            {CAMPBELL_DATA.map(unit => (
+              <button
+                key={unit.id}
+                onClick={() => { setSelectedUnit(unit); setView('chapters'); }}
+                className={`group flex items-center justify-between p-6 rounded-3xl border-2 transition-all duration-300 text-left
+                  ${darkMode ? 'border-slate-800 bg-slate-900/40 hover:border-slate-700' : 'border-slate-50 bg-slate-50 hover:bg-white hover:border-slate-200 hover:shadow-xl hover:-translate-y-1'}
+                `}
+              >
+                <div className="flex items-center gap-6">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-lg ${unit.color === 'blue' ? 'bg-blue-500' : unit.color === 'emerald' ? 'bg-emerald-500' : unit.color === 'purple' ? 'bg-purple-500' : 'bg-orange-500'}`}>
+                    <Layers size={28} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold opacity-50 uppercase tracking-widest">{unit.id}</span>
+                    <h2 className="text-lg font-bold leading-tight">{unit.title.split(': ')[1]}</h2>
+                  </div>
+                </div>
+                <ChevronRight className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* VIEW 2: CAPÍTULOS */}
+        {view === 'chapters' && (
+          <div className="space-y-4">
+            <h2 className={`text-sm font-black uppercase tracking-widest mb-6 ${activeColor.text}`}>{selectedUnit.title}</h2>
+            {selectedUnit.chapters.map(chapter => {
+              const completed = isChapterComplete(chapter);
+              return (
+                <button
+                  key={chapter.id}
+                  onClick={() => { setSelectedChapter(chapter); setView('concepts'); }}
+                  className={`w-full p-5 flex items-center justify-between rounded-2xl border transition-all text-left
+                    ${darkMode ? 'border-slate-800 bg-slate-900 hover:bg-slate-800' : 'border-slate-100 bg-white hover:shadow-md'}
+                    ${completed ? (darkMode ? 'border-emerald-900/50 bg-emerald-950/10' : 'border-emerald-100 bg-emerald-50/30') : ''}
+                  `}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${completed ? 'bg-emerald-500 text-white' : (darkMode ? 'bg-slate-800' : 'bg-slate-100 text-slate-400')}`}>
+                      {completed ? <Check size={18} /> : chapter.id.replace('c', '')}
+                    </div>
+                    <span className="font-semibold text-base">{chapter.title.split(': ')[1]}</span>
+                  </div>
+                  <ChevronRight size={18} className="opacity-30" />
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {/* VIEW 3: CONCEITOS */}
+        {view === 'concepts' && (
+          <div className="space-y-4">
+            <h2 className={`text-sm font-black uppercase tracking-widest mb-6 opacity-50`}>{selectedChapter.title}</h2>
+            {selectedChapter.concepts.map(concept => {
+              const completed = isConceptComplete(concept.id, concept.tasks);
+              return (
+                <div key={concept.id} className="relative group">
+                  <button
+                    onClick={() => { setSelectedConcept(concept); setView('checklist'); }}
+                    className={`w-full p-6 flex flex-col rounded-3xl border-2 transition-all text-left
+                      ${darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-100 bg-white hover:border-slate-300'}
+                      ${completed ? (darkMode ? 'border-emerald-500/30 ring-1 ring-emerald-500/20' : 'border-emerald-200 bg-emerald-50/10 shadow-inner') : ''}
+                    `}
+                  >
+                    <div className="flex items-start justify-between">
+                      <h3 className={`font-bold leading-snug flex-1 pr-8 ${completed ? 'text-emerald-600' : ''}`}>
+                        {concept.text}
+                      </h3>
+                      {completed ? <Trophy size={20} className="text-emerald-500" /> : <ChevronRight size={20} className="opacity-20" />}
+                    </div>
+                    <div className="mt-4 flex items-center gap-3 text-xs font-bold opacity-40">
+                      <div className="flex -space-x-1">
+                        {concept.tasks.map((_, i) => (
+                          <div key={i} className={`w-2 h-2 rounded-full border border-white dark:border-slate-900 ${checkedItems[`${concept.id}-${i}`] ? 'bg-emerald-500' : 'bg-slate-300'}`} />
+                        ))}
+                      </div>
+                      <span>{concept.tasks.length} TÓPICOS</span>
+                    </div>
+                  </button>
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); setShowSummary(showSummary === concept.id ? null : concept.id); }}
+                    className="absolute top-6 right-6 p-1 opacity-40 hover:opacity-100"
+                  >
+                    <Info size={18} />
+                  </button>
+                  {showSummary === concept.id && (
+                    <div className={`p-4 rounded-xl mt-2 text-sm italic animate-in slide-in-from-top-2 duration-300 ${darkMode ? 'bg-slate-800/50' : 'bg-slate-50 text-slate-600'}`}>
+                      {concept.summary}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* VIEW 4: CHECKLIST FINAL */}
+        {view === 'checklist' && (
+          <div className="space-y-8 pb-20">
+            <div className={`p-8 rounded-[40px] text-center ${darkMode ? 'bg-slate-900' : 'bg-slate-50'}`}>
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-40 block mb-4">Meta de Estudo</span>
+              <h2 className="text-xl font-extrabold leading-tight">{selectedConcept.text}</h2>
+            </div>
+
+            <div className="space-y-3">
+              {selectedConcept.tasks.map((task, idx) => {
+                const taskId = `${selectedConcept.id}-${idx}`;
+                const isChecked = checkedItems[taskId];
+                return (
+                  <div 
+                    key={taskId}
+                    onClick={() => toggleTask(taskId, selectedConcept.id, selectedConcept.tasks, selectedChapter)}
+                    className={`group flex items-center gap-5 p-5 rounded-2xl cursor-pointer transition-all border-2
+                      ${isChecked 
+                        ? (darkMode ? 'border-emerald-900/30 bg-emerald-950/10' : 'border-emerald-100 bg-emerald-50/30') 
+                        : (darkMode ? 'border-slate-800 bg-slate-900 hover:border-slate-700' : 'border-slate-100 bg-white hover:border-slate-200 hover:shadow-md')
+                      }`}
+                  >
+                    <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300
+                      ${isChecked ? 'bg-emerald-500 text-white scale-110' : 'border-2 border-slate-300 group-hover:border-emerald-400'}`}
+                    >
+                      {isChecked && <Check size={16} strokeWidth={4} />}
+                    </div>
+                    <span className={`text-lg transition-all duration-300 ${isChecked ? 'line-through opacity-30 font-normal italic translate-x-2' : 'font-semibold'}`}>
+                      {task}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </main>
+
+      {/* FOOTER PERSISTENTE */}
+      <footer className={`fixed bottom-0 left-0 right-0 p-4 border-t text-center ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-100'}`}>
+        <p className="text-[9px] font-black tracking-[0.4em] opacity-30 uppercase">
+          Campbell Engineering • Study Flow
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;

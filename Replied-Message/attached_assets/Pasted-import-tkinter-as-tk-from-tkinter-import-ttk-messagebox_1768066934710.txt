@@ -1,0 +1,124 @@
+import tkinter as tk
+from tkinter import ttk, messagebox
+
+class CampbellChecklist:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Gerenciador de Estudos - Biologia Campbell")
+        self.root.geometry("600x500")
+
+        # Dados estruturados com base nas imagens enviadas
+        self.dados = {
+            "UNIDADE 1: A QUÍMICA DA VIDA": {
+                "Capítulo 2: O Contexto Químico da Vida": {
+                    "CONCEITO 2.1: A matéria consiste em elementos químicos...": [
+                        "Elementos e compostos",
+                        "Os elementos da vida",
+                        "Estudo de caso: evolução da tolerância a elementos tóxicos"
+                    ],
+                    "CONCEITO 2.2: As propriedades de um elemento dependem da estrutura de seus átomos": [
+                        "Partículas subatômicas",
+                        "Número atômico e massa atômica",
+                        "Isótopos",
+                        "Os níveis de energia dos elétrons",
+                        "Distribuição eletrônica e propriedades químicas",
+                        "Orbitais eletrônicos"
+                    ],
+                    "CONCEITO 2.3: A formação e a função das moléculas dependem das ligações químicas": [
+                        "Ligações covalentes",
+                        "Ligações iônicas",
+                        "Ligações químicas fracas",
+                        "Forma e função moleculares"
+                    ],
+                    "CONCEITO 2.4: As reações químicas formam e rompem ligações químicas": []
+                },
+                "Capítulo 3: Água e Vida": {
+                    "CONCEITO 3.1: As ligações covalentes polares nas moléculas de água...": [
+                        "A molécula que sustenta toda a vida"
+                    ],
+                    "CONCEITO 3.2: Quatro propriedades emergentes da água contribuem para a adequação da Terra...": [
+                        "Coesão das moléculas de água",
+                        "Moderação da temperatura pela água",
+                        "Flutuação do gelo sobre a água líquida",
+                        "Água: o solvente da vida",
+                        "Possível evolução de vida em outros planetas"
+                    ],
+                    "CONCEITO 3.3: Condições ácidas e básicas afetam os organismos vivos": [
+                        "Ácidos e bases",
+                        "A escala do pH",
+                        "Tampões",
+                        "Acidificação: ameaças à qualidade da água"
+                    ]
+                }
+            }
+        }
+
+        self.caminho = [] # Para rastrear onde o usuário está (Unidade -> Cap -> Conc)
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.label_titulo = tk.Label(self.root, text="Selecione uma Unidade", font=("Arial", 12, "bold"), pady=10)
+        self.label_titulo.pack()
+
+        self.container = tk.Frame(self.root)
+        self.container.pack(fill="both", expand=True, padx=20, pady=10)
+
+        self.btn_voltar = tk.Button(self.root, text="Voltar", command=self.voltar, state="disabled")
+        self.btn_voltar.pack(side="bottom", pady=10)
+
+        self.mostrar_unidades()
+
+    def limpar_container(self):
+        for widget in self.container.winfo_children():
+            widget.destroy()
+
+    def mostrar_unidades(self):
+        self.limpar_container()
+        self.label_titulo.config(text="UNIDADES")
+        self.btn_voltar.config(state="disabled")
+        for unidade in self.dados.keys():
+            btn = tk.Button(self.container, text=unidade, command=lambda u=unidade: self.mostrar_capitulos(u), anchor="w", padx=10)
+            btn.pack(fill="x", pady=2)
+
+    def mostrar_capitulos(self, unidade):
+        self.caminho = [unidade]
+        self.limpar_container()
+        self.label_titulo.config(text=unidade)
+        self.btn_voltar.config(state="normal")
+        for capitulo in self.dados[unidade].keys():
+            btn = tk.Button(self.container, text=capitulo, command=lambda c=capitulo: self.mostrar_conceitos(c), anchor="w", padx=10)
+            btn.pack(fill="x", pady=2)
+
+    def mostrar_conceitos(self, capitulo):
+        unidade = self.caminho[0]
+        self.caminho = [unidade, capitulo]
+        self.limpar_container()
+        self.label_titulo.config(text=capitulo)
+        for conceito in self.dados[unidade][capitulo].keys():
+            btn = tk.Button(self.container, text=conceito, command=lambda con=conceito: self.mostrar_textos(con), wraplength=500, justify="left")
+            btn.pack(fill="x", pady=2)
+
+    def mostrar_textos(self, conceito):
+        unidade, capitulo = self.caminho[0], self.caminho[1]
+        self.limpar_container()
+        self.label_titulo.config(text=conceito)
+        
+        textos = self.dados[unidade][capitulo][conceito]
+        if not textos:
+            tk.Label(self.container, text="Não há sub-textos listados para este conceito.").pack()
+        
+        for texto in textos:
+            var = tk.IntVar()
+            chk = tk.Checkbutton(self.container, text=texto, variable=var, font=("Arial", 10))
+            chk.pack(anchor="w", pady=2)
+
+    def voltar(self):
+        if len(self.caminho) == 1:
+            self.mostrar_unidades()
+        elif len(self.caminho) == 2:
+            self.mostrar_capitulos(self.caminho[0])
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CampbellChecklist(root)
+    root.mainloop()

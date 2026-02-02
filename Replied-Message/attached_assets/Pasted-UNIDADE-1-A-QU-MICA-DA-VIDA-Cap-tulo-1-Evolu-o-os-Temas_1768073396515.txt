@@ -1,0 +1,2493 @@
+UNIDADE 1: A QUÍMICA DA VIDA
+
+
+
+Capítulo 1: Evolução, os Temas da Biologia e a Pesquisa Científica
+
+CONCEITO 1.1: O estudo da vida revela temas comuns
+
+- Tema: Novas propriedades emergem em cada nível da hierarquia biológica
+
+- Tema: os processos da vida envolvem a expressão e a transmissão de informação genética
+
+- Tema: a vida requer a transferência e transformação de energia e matéria
+
+- Tema: de ecossistemas a moléculas, as interações são fundamentais nos sistemas biológicos
+
+- Evolução, o tema central da biologia
+
+CONCEITO 1.2: O tema central: a evolução é responsável pela uniformidade e diversidade da vida
+
+- Classificando a diversidade da vida
+
+- Charles Darwin e a teoria da seleção natural
+
+- A árvore da vida
+
+CONCEITO 1.3: Ao estudar a natureza, os cientistas fazem observações, formulam e testam hipóteses
+
+- Fazendo observações
+
+- Formulando e testando hipóteses
+
+- A flexibilidade do processo científico
+
+- Um estudo de caso em pesquisa científica: investigando a coloração da pelagem em populações de camundongo
+
+- Variáveis experimentais e controles
+
+- Teoria na ciência
+
+CONCEITO 1.4: A ciência faz uso de uma abordagem cooperativa e de diversos pontos de vista
+
+- Aprimorando o trabalho de outros
+
+- Ciência, tecnologia e sociedade
+
+- O valor de pontos de vista diversificados
+
+
+
+Capítulo 2: O Contexto Químico da Vida
+
+CONCEITO 2.1: A matéria consiste em elementos químicos na forma simples e em combinações denominadas compostos
+
+- Elementos e compostos
+
+- Os elementos da vida
+
+- Estudo de caso: evolução da tolerância a elementos tóxicos
+
+CONCEITO 2.2: As propriedades de um elemento dependem da estrutura de seus átomos
+
+- Partículas subatômicas
+
+- Número atômico e massa atômica
+
+- Isótopos
+
+- Os níveis de energia dos elétrons
+
+- Distribuição eletrônica e propriedades químicas
+
+- Orbitais eletrônicos
+
+CONCEITO 2.3: A formação e a função das moléculas dependem das ligações químicas entre os átomos
+
+- Ligações covalentes
+
+- Ligações iônicas
+
+- Ligações químicas fracas
+
+- Forma e função moleculares
+
+CONCEITO 2.4: As reações químicas formam e rompem ligações químicas
+
+
+
+Capítulo 3: Água e Vida
+
+CONCEITO 3.1: As ligações covalentes polares nas moléculas de água promovem ligações de hidrogênio
+
+- A molécula que sustenta toda a vida
+
+CONCEITO 3.2: Quatro propriedades emergentes da água contribuem para a adequação da Terra à vida
+
+- Coesão das moléculas de água
+
+- Moderação da temperatura pela água
+
+- Flutuação do gelo sobre a água líquida
+
+- Água: o solvente da vida
+
+- Possível evolução de vida em outros planetas
+
+CONCEITO 3.3: Condições ácidas e básicas afetam os organismos vivos
+
+- Ácidos e bases
+
+- A escala do pH
+
+- Tampões
+
+- Acidificação: ameaças à qualidade da água
+
+
+
+Capítulo 4: O Carbono e a Diversidade Molecular da Vida
+
+- Carbono: esqueleto da vida
+
+CONCEITO 4.1: A química orgânica é o estudo dos compostos de carbono
+
+- Moléculas orgânicas e a origem da vida na Terra
+
+CONCEITO 4.2: Os átomos de carbono podem formar diversas moléculas ligando-se a outros quatro átomos
+
+- A formação de ligações com o carbono
+
+- A diversidade molecular se origina da variação dos esqueletos de carbono
+
+CONCEITO 4.3: Alguns grupos químicos são essenciais para a função molecular
+
+- Os grupos químicos mais importantes no processo da vida
+
+- ATP: importante fonte de energia para os processos celulares
+
+- Os elementos químicos da vida: uma revisão
+
+
+
+Capítulo 5: Estrutura e Função de Grandes Moléculas Biológicas
+
+- As moléculas da vida
+
+CONCEITO 5.1: Macromoléculas são polímeros compostos por monômeros
+
+- A síntese e a clivagem de polímeros
+
+- A diversidade dos polímeros
+
+CONCEITO 5.2: Carboidratos servem como combustível e material de construção
+
+- Açúcares
+
+- Polissacarídeos
+
+CONCEITO 5.3: Os lipídeos são um grupo diversificado de moléculas hidrofóbicas
+
+- Gorduras
+
+- Fosfolipídeos
+
+- Esteroides
+
+CONCEITO 5.4: As proteínas apresentam grande variedade de estruturas, o que resulta em uma variedade de funções
+
+- Monômeros de aminoácidos
+
+- Polipeptídeos (polímeros de aminoácidos)
+
+- A estrutura e a função das proteínas
+
+CONCEITO 5.5: Os ácidos nucleicos armazenam, transmitem e ajudam a expressar a informação hereditária
+
+- Os papéis dos ácidos nucleicos
+
+- Os componentes dos ácidos nucleicos
+
+- Polímeros de nucleotídeos
+
+- As estruturas das moléculas de DNA e RNA
+
+CONCEITO 5.6: A genômica e a proteômica transformaram a pesquisa biológica e suas aplicações
+
+- DNA e proteínas: novas fitas métricas da evolução
+
+
+
+
+
+UNIDADE 2: A CÉLULA
+
+
+
+Capítulo 6: Uma Viagem pela Célula
+
+As unidades fundamentais da vida
+
+CONCEITO 6.1: Para estudar as células, os biólogos utilizam microscópios e ferramentas da bioquímica
+
+- Microscopia
+
+- Fracionamento celular
+
+CONCEITO 6.2: Células eucarióticas possuem membranas internas que compartimentalizam suas funções
+
+- Comparação entre células procarióticas e eucarióticas
+
+- Uma visão panorâmica da célula eucariótica
+
+CONCEITO 6.3: As instruções genéticas das células eucarióticas são guardadas no núcleo e executadas pelos ribossomos
+
+- O núcleo: central de informações
+
+- Ribossomos: fábricas de proteínas
+
+CONCEITO 6.4: O sistema de endomembranas regula o tráfego de proteínas e realiza as funções metabólicas na célula
+
+- O retículo endoplasmático: fábrica biossintética
+
+- O aparelho de Golgi: centro de remessa e recepção
+
+- Lisossomos: compartimentos de digestão
+
+- Vacúolos: diversos compartimentos de manutenção
+
+- O sistema de endomembranas: uma revisão
+
+CONCEITO 6.5: As mitocôndrias e os cloroplastos mudam a energia de uma forma para outra
+
+- As origens evolutivas de mitocôndrias e cloroplastos
+
+- Mitocôndrias: conversão de energia química
+
+- Cloroplastos: captura de energia livre
+
+- Peroxissomos: oxidação
+
+CONCEITO 6.6: O citoesqueleto é uma rede de fibras que organiza estruturas e atividades na célula
+
+- Funções do citoesqueleto: suporte e motilidade
+
+- Componentes do citoesqueleto
+
+CONCEITO 6.7: Os componentes extracelulares e as conexões entre as células ajudam a coordenar as atividades celulares
+
+- Paredes celulares de plantas
+
+- A matriz extracelular (MEC) de células animais
+
+- Junções intercelulares
+
+- A célula: unidade viva maior do que a soma das partes
+
+
+
+Capítulo 7: Estrutura e Função da Membrana
+
+A vida por um fio
+
+CONCEITO 7.1: As membranas celulares são mosaicos fluidos de lipídeos e de proteínas
+
+- A fluidez das membranas
+
+- Evolução das diferenças na composição lipídica das membranas
+
+- Proteínas de membrana e suas funções
+
+- O papel dos carboidratos da membrana no reconhecimento célula-célula
+
+- Síntese e lateralidade das membranas
+
+CONCEITO 7.2: A estrutura da membrana resulta em permeabilidade seletiva
+
+- A permeabilidade da bicamada lipídica
+
+- Proteínas de transporte
+
+CONCEITO 7.3: O transporte passivo é a difusão de uma substância através da membrana sem gasto de energia
+
+- Efeitos da osmose no balanço hídrico
+
+- Difusão facilitada: transporte passivo auxiliado por proteínas
+
+CONCEITO 7.4: O transporte ativo usa energia para mover os solutos contra seus gradientes
+
+- A necessidade de energia no transporte ativo
+
+- Como a bomba de íons mantém o potencial da membrana
+
+- Cotransporte: transporte acoplado a uma proteína de membrana
+
+CONCEITO 7.5: O transporte em massa através da membrana plasmática ocorre por exocitose e endocitose
+
+- Exocitose
+
+- Endocitose
+
+
+
+Capítulo 8: Introdução ao Metabolismo
+
+A energia da vida
+
+CONCEITO 8.1: O metabolismo de um organismo transforma matéria e energia de acordo com as leis da termodinâmica
+
+- Organização da química da vida em rotas metabólicas
+
+- Formas de energia
+
+- As leis da transformação de energia
+
+CONCEITO 8.2: A variação de energia livre nos diz se a reação ocorre ou não espontaneamente
+
+- Variação de energia livre, ΔG
+
+- Energia livre, estabilidade e equilíbrio
+
+- Energia livre e metabolismo
+
+CONCEITO 8.3: A molécula de ATP fornece energia para o trabalho celular acoplando reações exergônicas com reações endergônicas
+
+- Estrutura e hidrólise do ATP
+
+- Como a hidrólise do ATP realiza trabalho
+
+- A regeneração do ATP
+
+CONCEITO 8.4: As enzimas aceleram as reações do metabolismo diminuindo as barreiras de energia
+
+- A barreira de energia de ativação
+
+- Como as enzimas aceleram reações
+
+- Especificidade de substrato das enzimas
+
+- Catálise no sítio ativo da enzima
+
+- Efeito das condições locais na atividade enzimática
+
+- Evolução das enzimas
+
+CONCEITO 8.5: A regulação da atividade enzimática ajuda o controle do metabolismo
+
+- Regulação alostérica das enzimas
+
+- Localização das enzimas no interior da célula
+
+
+
+Capítulo 9: Respiração Celular e Fermentação
+
+Vida é trabalho
+
+CONCEITO 9.1: Rotas catabólicas produzem energia oxidando combustíveis orgânicos
+
+- Rotas catabólicas e produção de ATP
+
+- Reações redox: oxidação e redução
+
+- As fases da respiração celular: uma prévia
+
+CONCEITO 9.2: A glicólise obtém energia química oxidando glicose a piruvato
+
+CONCEITO 9.3: Após a oxidação do piruvato, o ciclo do ácido cítrico completa a oxidação que produz energia a partir de moléculas orgânicas
+
+- Oxidação do piruvato a acetil-CoA
+
+- O ciclo do ácido cítrico
+
+CONCEITO 9.4: Durante a fosforilação oxidativa, a quimiosmose acopla o transporte de elétrons à síntese de ATP
+
+- A rota do transporte de elétrons
+
+- Quimiosmose: o mecanismo acoplado de energia
+
+- Um balanço da produção de ATP pela respiração celular
+
+CONCEITO 9.5: Fermentação e respiração anaeróbia capacitam as células a produzir ATP sem o uso de oxigênio
+
+- Tipos de fermentação
+
+- Comparação entre fermentação e respiração aeróbia e anaeróbia
+
+- O significado evolutivo da glicólise
+
+CONCEITO 9.6: A glicólise e o ciclo do ácido cítrico conectam-se a diversas outras rotas metabólicas
+
+- A versatilidade do catabolismo
+
+- Biossíntese (rotas anabólicas)
+
+- Regulação da respiração celular via mecanismos de retroalimentação
+
+
+
+Capítulo 10: Fotossíntese
+
+O processo que alimenta a biosfera
+
+CONCEITO 10.1: A fotossíntese converte a energia luminosa na energia química dos alimentos
+
+- Cloroplastos: os locais da fotossíntese nos vegetais
+
+- Rastreando átomos ao longo da fotossíntese: uma pesquisa científica
+
+- As duas fases da fotossíntese: uma prévia
+
+CONCEITO 10.2: As reações luminosas convertem a energia solar na energia química do ATP e do NADPH
+
+- A natureza da luz solar
+
+- Pigmentos fotossintéticos: os receptores de luz
+
+- Excitação da clorofila pela luz
+
+- O fotossistema: um complexo do centro de reação associado aos complexos dos coletores de luz
+
+- Fluxo linear de elétrons
+
+- Fluxo cíclico de elétrons
+
+- Comparação entre a quimiosmose nos cloroplastos e nas mitocôndrias
+
+CONCEITO 10.3: O ciclo de Calvin utiliza a energia química do ATP e do NADPH para reduzir CO2 em açúcar
+
+CONCEITO 10.4: Mecanismos alternativos de fixação do carbono evoluíram em climas áridos e quentes
+
+- Fotorrespiração: um relicto evolutivo?
+
+- Plantas C4
+
+- Plantas MAC
+
+- A importância da fotossíntese: uma revisão
+
+
+
+Capítulo 11: Comunicação Celular
+
+A rede celular
+
+CONCEITO 11.1: Sinais externos são convertidos em respostas dentro da célula
+
+- Evolução da sinalização celular
+
+- Sinalização local e de longa distância
+
+- Os três estágios da sinalização celular: uma prévia
+
+CONCEITO 11.2: Recepção: uma molécula sinalizadora liga-se a uma proteína receptora, causando mudança na sua forma
+
+- Os receptores na membrana plasmática
+
+- Receptores intracelulares
+
+CONCEITO 11.3: Transdução: cascatas de interações moleculares transmitem sinais a partir dos receptores para moléculas-alvo na célula
+
+- Rotas de transdução de sinal
+
+- Fosforilação e desfosforilação proteica
+
+- Pequenas moléculas e íons como segundos mensageiros
+
+CONCEITO 11.4: Resposta: a sinalização celular induz regulação da transcrição ou atividades citoplasmáticas
+
+- Respostas nucleares e citoplasmáticas
+
+- Regulação da resposta
+
+CONCEITO 11.5: Apoptose (morte celular programada) integra múltiplas rotas de sinalização celular
+
+- Apoptose no verme de solo Caenorhabditis elegans
+
+- Rotas apoptóticas e os sinais que as desencadeiam
+
+
+
+UNIDADE 3: GENÉTICA
+
+
+
+Capítulo 12: O Ciclo Celular
+
+A continuidade da vida
+
+CONCEITO 12.1: A maioria das divisões celulares resulta em células-filhas geneticamente idênticas
+
+- Organização celular do material genético
+
+- Distribuição dos cromossomos durante a divisão das células eucarióticas
+
+CONCEITO 12.2: A fase mitótica alterna com a interfase no ciclo celular
+
+- Fases do ciclo celular
+
+- O fuso mitótico: uma análise mais detalhada
+
+- Citocinese: uma análise mais detalhada
+
+- Fissão binária em bactérias
+
+- A evolução da mitose
+
+CONCEITO 12.3: O ciclo celular eucariótico é regulado por um sistema de controle molecular
+
+- O sistema de controle do ciclo celular
+
+- A perda do controle do ciclo celular nas células cancerosas
+
+
+
+
+
+UNIDADE 3: GENÉTICA
+
+
+
+Capítulo 13: Meiose e Ciclos de Vida Sexuada
+
+Variações de um tema
+
+CONCEITO 13.1: A prole adquire os genes dos pais por herança cromossômica
+
+- Herança de genes
+
+- Comparação entre reprodução assexuada e sexuada
+
+CONCEITO 13.2: A fertilização e a meiose se alternam durante os ciclos de vida sexuada
+
+- Conjuntos de cromossomos em células humanas
+
+- Comportamento dos conjuntos de cromossomos no ciclo de vida humano
+
+- A variedade dos ciclos de vida sexuada
+
+CONCEITO 13.3: A meiose reduz o número de conjuntos de cromossomos de diploide para haploide
+
+- Os estágios da meiose
+
+- Crossing over e sinapse durante a Prófase I
+
+- Comparação entre mitose e meiose
+
+CONCEITO 13.4: A variação genética produzida nos ciclos de vida sexuada contribui para a evolução
+
+- Origens da variação genética da prole
+
+- A importância evolutiva da variação genética entre populações
+
+
+
+Capítulo 14: Mendel e a Ideia de Gene
+
+Puxando cartas de um baralho de genes
+
+CONCEITO 14.1: Mendel utilizou a abordagem científica para identificar duas leis de hereditariedade
+
+- A abordagem experimental quantitativa de Mendel
+
+- A lei da segregação
+
+- A lei da segregação independente
+
+CONCEITO 14.2: As leis da probabilidade governam a herança mendeliana
+
+- As regras da multiplicação e da adição aplicadas a cruzamentos mono-híbridos
+
+- Resolvendo problemas genéticos complexos com as regras da probabilidade
+
+CONCEITO 14.3: Padrões de hereditariedade muitas vezes são mais complexos do que os previstos pela genética mendeliana simples
+
+- Estendendo a genética mendeliana para um único gene
+
+- Estendendo a genética mendeliana para dois ou mais genes
+
+- Natureza e ambiente: o impacto do meio ambiente sobre o fenótipo
+
+- Visão mendeliana sobre hereditariedade e variação
+
+CONCEITO 14.4: Muitas características humanas seguem os padrões mendelianos de hereditariedade
+
+- Análise da genealogia (pedigree)
+
+- Distúrbios herdados de forma recessiva
+
+- Distúrbios herdados de forma dominante
+
+- Doenças multifatoriais
+
+- Testes e aconselhamento genéticos
+
+
+
+Capítulo 15: A Base Cromossômica da Herança
+
+Localizando os genes ao longo dos cromossomos
+
+CONCEITO 15.1: Morgan mostrou que a herança mendeliana tem sua base física no comportamento dos cromossomos: pesquisa científica
+
+- Organismo experimental escolhido por Morgan
+
+- Correlacionando comportamento dos alelos de um gene com comportamento de um par de cromossomos
+
+CONCEITO 15.2: Genes ligados ao sexo exibem padrões únicos de herança
+
+- A base cromossômica do sexo
+
+- Herança de genes ligados ao X
+
+- Inativação do X em fêmeas de mamíferos
+
+CONCEITO 15.3: Genes ligados tendem a ser herdados juntos, pois estão localizados próximos uns aos outros no mesmo cromossomo
+
+- Como a ligação afeta a herança
+
+- Recombinação gênica e ligação
+
+- Mapeamento da distância entre os genes usando dados de recombinação: pesquisa científica
+
+CONCEITO 15.4: Alterações no número ou na estrutura dos cromossomos causam alguns distúrbios genéticos
+
+- Número cromossômico anormal
+
+- Alterações da estrutura cromossômica
+
+- Distúrbios humanos devido a alterações cromossômicas
+
+CONCEITO 15.5: Alguns padrões de herança são exceções para a herança mendeliana padrão
+
+- Impressão (imprinting) genômica
+
+- Herança de genes de organelas
+
+
+
+Capítulo 16: A Base Molecular da Hereditariedade
+
+As instruções operacionais da vida
+
+CONCEITO 16.1: O DNA é o material genético
+
+- A procura pelo material genético: pesquisa científica
+
+- Construindo um modelo estrutural para o DNA: pesquisa científica
+
+CONCEITO 16.2: Diversas proteínas atuam juntas na replicação e no reparo do DNA
+
+- O princípio básico: pareamento de bases com fita-molde
+
+- A replicação do DNA: uma visão mais detalhada
+
+- Verificação e reparo do DNA
+
+- Significado evolutivo de alterações de nucleotídeos do DNA
+
+- Replicando as extremidades das moléculas de DNA
+
+CONCEITO 16.3: Um cromossomo consiste em uma molécula de DNA empacotada com proteínas
+
+
+
+Capítulo 17: Expressão Gênica: Do Gene à Proteína
+
+O fluxo de informação genética
+
+CONCEITO 17.1: Os genes especificam proteínas por meio da transcrição e da tradução
+
+- Evidências obtidas a partir do estudo de defeitos metabólicos
+
+- Princípios básicos da transcrição e da tradução
+
+- O código genético
+
+CONCEITO 17.2: A transcrição é a síntese de RNA controlada pelo DNA: uma visão mais detalhada
+
+- Os componentes moleculares da transcrição
+
+- Síntese do transcrito de RNA
+
+CONCEITO 17.3: As células eucarióticas modificam o RNA após a transcrição
+
+- Alterações nas extremidades do RNAm
+
+- Clivagem de genes e processamento do RNA
+
+CONCEITO 17.4: A tradução é a síntese de polipeptídeos controlada pelo RNA: uma visão mais detalhada
+
+- Os componentes moleculares da tradução
+
+- Construindo um polipeptídeo
+
+- Finalização e direcionamento das proteínas funcionais
+
+- Síntese de múltiplos polipeptídeos em bactérias e eucariotos
+
+CONCEITO 17.5: Mutações de um ou poucos nucleotídeos podem afetar a estrutura e a função da proteína
+
+- Tipos de mutações de pequena escala
+
+- Novas mutações e mutagênicos
+
+- O que é um gene? Revisitando a questão
+
+
+
+Capítulo 18: Regulação da Expressão Gênica
+
+Expressão diferencial dos genes
+
+CONCEITO 18.1: As bactérias frequentemente respondem a alterações ambientais regulando a transcrição
+
+- Óperons: o conceito básico
+
+- Óperons reprimíveis e induzíveis: dois tipos de regulação gênica negativa
+
+- Regulação gênica positiva
+
+CONCEITO 18.2: A expressão gênica eucariótica é regulada em muitos estágios
+
+- Expressão gênica diferencial
+
+- Regulação da estrutura da cromatina
+
+- Regulação do início da transcrição
+
+- Mecanismos de regulação pós-transcricional
+
+CONCEITO 18.3: O RNA não codificante exerce múltiplos papéis no controle da expressão gênica
+
+- Efeitos dos microRNA e pequenos RNA de interferência nos RNAm
+
+- Remodelamento da cromatina por RNAnc
+
+- O significado evolutivo dos pequenos RNAnc
+
+CONCEITO 18.4: Um programa de expressão gênica diferencial leva aos diferentes tipos celulares nos organismos multicelulares
+
+- Um programa genético para o desenvolvimento embrionário
+
+- Determinantes citoplasmáticos e sinais induzíveis
+
+- Regulação sequencial da expressão gênica durante a diferenciação celular
+
+- Formação de padrão: determinação do plano corporal
+
+CONCEITO 18.5: O câncer decorre de alterações genéticas que afetam o controle do ciclo celular
+
+- Tipos de genes associados ao câncer
+
+- Interferência com rotas normais de sinalização celular
+
+- O modelo de múltiplas etapas do desenvolvimento do câncer
+
+- Predisposição herdada e fatores ambientais que contribuem para o câncer
+
+- O papel dos vírus no câncer
+
+
+
+Capítulo 19: Vírus
+
+Uma vida emprestada
+
+CONCEITO 19.1: O vírus consiste em um ácido nucleico circundado por uma capa proteica
+
+- A descoberta dos vírus: pesquisa científica
+
+- Estrutura dos vírus
+
+CONCEITO 19.2: Os vírus somente se reproduzem nas células hospedeiras
+
+- Características gerais dos ciclos replicativos virais
+
+- Ciclos reprodutivos dos fagos
+
+- Ciclos replicativos dos vírus de animais
+
+- Evolução dos vírus
+
+CONCEITO 19.3: Vírus, viroides e príons são patógenos formidáveis de animais e plantas
+
+- Doenças virais em animais
+
+- Vírus emergentes
+
+- Doenças virais em plantas
+
+- Viroides e príons: os agentes infecciosos mais simples
+
+
+
+Capítulo 20: Ferramentas do DNA e Biotecnologia
+
+A caixa de ferramentas do DNA
+
+CONCEITO 20.1: O sequenciamento do DNA e a clonagem do DNA são ferramentas valiosas para a engenharia genética e as pesquisas biológicas
+
+- Sequenciamento de DNA
+
+- Produzindo múltiplas cópias de um gene ou outros segmentos de DNA
+
+- Uso de enzimas de restrição para produzir DNA plasmidial recombinante
+
+- Amplificação de DNA: a reação em cadeia da polimerase (PCR) e seu uso na clonagem do DNA
+
+- Expressão de genes eucarióticos clonados
+
+CONCEITO 20.2: Os biólogos utilizam a tecnologia do DNA para estudar a expressão e a função de um gene
+
+- Análise da expressão gênica
+
+- Determinando a função gênica
+
+CONCEITO 20.3: Organismos clonados e células-tronco são úteis para pesquisa básica e outras aplicações
+
+- Clonagem de plantas: culturas unicelulares
+
+- Clonagem de animais: transplante nuclear
+
+- Células-tronco de animais
+
+CONCEITO 20.4: As aplicações práticas da biotecnologia com base em DNA afetam nossas vidas de várias formas
+
+- Aplicações médicas
+
+- Evidência forense e perfis genéticos
+
+- Limpeza do meio ambiente
+
+- Aplicações na agricultura
+
+- Questões de ética e segurança suscitadas pela tecnologia do DNA
+
+
+
+Capítulo 21: Genomas e Sua Evolução
+
+Lendo as folhas da árvore da vida
+
+CONCEITO 21.1: O Projeto Genoma Humano promoveu o desenvolvimento de técnicas de sequenciamento mais rápidas e mais baratas
+
+CONCEITO 21.2: Os cientistas utilizam a bioinformática para analisar genomas e suas funções
+
+- Centralização de recursos para a análise de sequências genômicas
+
+- Identificação de genes que codificam proteínas e estudo das suas funções
+
+- Compreendendo os genes e seus produtos no nível de sistema
+
+CONCEITO 21.3: Os genomas variam em tamanho, número de genes e densidade gênica
+
+- Tamanho do genoma
+
+- Número de genes
+
+- Densidade gênica e DNA não codificante
+
+CONCEITO 21.4: Eucariotos multicelulares têm grande quantidade de DNA não codificante e diversas famílias multigênicas
+
+- Elementos de transposição e sequências relacionadas
+
+- Outros DNA repetitivos, incluindo sequências simples de DNA
+
+- Genes e famílias multigênicas
+
+CONCEITO 21.5: Duplicação, rearranjo e mutação do DNA contribuem para a evolução dos genomas
+
+- Duplicação de todo um conjunto de cromossomos
+
+- Alterações na estrutura dos cromossomos
+
+- Duplicação e divergência das regiões do DNA que contêm os genes
+
+- Rearranjo de segmentos dos genes: duplicação e embaralhamento de éxons
+
+- Como os elementos de transposição contribuem para a evolução do genoma
+
+CONCEITO 21.6: A comparação de sequências de genomas fornece evidências sobre a evolução e o desenvolvimento
+
+- Comparação de genomas
+
+- A grande conservação dos genes de desenvolvimento entre os animais
+
+
+
+
+
+UNIDADE 4: MECANISMOS DA EVOLUÇÃO
+
+
+
+Capítulo 22: Descendência com Modificação: Uma Visão Darwiniana da Vida
+
+- Formas infinitas e maravilhosas
+
+CONCEITO 22.1: A revolução darwiniana contestou visões tradicionais de uma Terra jovem habitada por espécies imutáveis
+
+- Scala naturae e a classificação das espécies
+
+- Ideias sobre mudança ao longo do tempo
+
+- A hipótese evolutiva de Lamarck
+
+CONCEITO 22.2: A descendência com modificação por seleção natural explica as adaptações dos organismos, bem como a uniformidade e a diversidade da vida
+
+- A pesquisa de Darwin
+
+- A origem das espécies
+
+CONCEITO 22.3: A evolução é sustentada por uma quantidade expressiva de evidências científicas
+
+- Observações diretas de mudança evolutiva
+
+- Homologia
+
+- O registro fóssil
+
+- Biogeografia
+
+- O que é teórico no ponto de vista de Darwin sobre a vida?
+
+
+
+Capítulo 23: A Evolução das Populações
+
+- A menor unidade evolutiva
+
+CONCEITO 23.1: A variabilidade genética torna a evolução possível
+
+- Variação genética
+
+- Fontes de variação gênica
+
+CONCEITO 23.2: A equação de Hardy-Weinberg pode ser usada para testar se a população está evoluindo
+
+- Pool gênico e frequência de alelos
+
+- A Equação de Hardy-Weinberg
+
+CONCEITO 23.3: Seleção natural, deriva genética e fluxo gênico podem alterar as frequências alélicas nas populações
+
+- Seleção natural
+
+- Deriva genética
+
+- Fluxo gênico
+
+CONCEITO 23.4: A seleção natural é o único mecanismo que promove evolução adaptativa de modo consistente
+
+- Seleção natural: um olhar mais detalhado
+
+- O papel essencial da seleção natural na evolução adaptativa
+
+- Seleção sexual
+
+- Seleção balanceadora
+
+- Por que a seleção natural não consegue modelar organismos perfeitos?
+
+
+
+Capítulo 24: A Origem das Espécies
+
+- Aquele "mistério dos mistérios"
+
+CONCEITO 24.1: O conceito biológico de espécie enfatiza o isolamento reprodutivo
+
+- O conceito biológico de espécie
+
+- Outras definições de espécie
+
+CONCEITO 24.2: A especiação pode ocorrer com ou sem separação geográfica
+
+- Especiação alopátrica ("outro país")
+
+- Especiação simpátrica ("mesmo país")
+
+- Especiação alopátrica e simpátrica: uma revisão
+
+CONCEITO 24.3: As zonas híbridas revelam fatores que causam isolamento reprodutivo
+
+- Padrões dentro das zonas híbridas
+
+- Zonas híbridas ao longo do tempo
+
+CONCEITO 24.4: A especiação pode ocorrer rápido ou devagar e pode resultar de mudanças em poucos ou em muitos genes
+
+- O tempo da especiação
+
+- Estudando a genética da especiação
+
+- Da especiação à macroevolução
+
+
+
+Capítulo 25: A História da Vida na Terra
+
+- Mundos perdidos
+
+CONCEITO 25.1: Condições da Terra primitiva tornaram possível a origem da vida
+
+- Síntese de compostos orgânicos na Terra primitiva
+
+- Síntese abiótica de macromoléculas
+
+- Protobiontes
+
+- Autorreplicação de RNA e o início da seleção natural
+
+CONCEITO 25.2: O registro fóssil documenta a história da vida
+
+- O registro fóssil
+
+- Como é determinada a idade de rochas e fósseis
+
+- A origem de novos grupos de organismos
+
+CONCEITO 25.3: Eventos fundamentais na história da vida incluem a origem dos organismos unicelulares e multicelulares e a colonização de ambientes terrestres
+
+- Os primeiros organismos unicelulares
+
+- A origem da multicelularidade
+
+- A colonização do ambiente terrestre
+
+CONCEITO 25.4: O apogeu e a queda de grupos de organismos refletem as diferenças nas taxas de especiação e extinção
+
+- Placas tectônicas
+
+- Extinções em massa
+
+- Radiações adaptativas
+
+CONCEITO 25.5: Importantes mudanças na forma corporal podem resultar de mudanças na sequência e na regulação de genes de desenvolvimento
+
+- Efeitos dos genes do desenvolvimento
+
+- A evolução do desenvolvimento
+
+CONCEITO 25.6: A evolução não tem objetivo específico
+
+- Novidades evolutivas
+
+- Tendências evolutivas
+
+
+
+
+
+UNIDADE 5: A HISTÓRIA EVOLUTIVA DA DIVERSIDADE BIOLÓGICA
+
+
+
+Capítulo 26: Filogenia e a Árvore da Vida
+
+Investigando a árvore da vida
+
+CONCEITO 26.1: As filogenias mostram relações evolutivas
+
+- Nomenclatura binomial
+
+- Classificação hierárquica
+
+- Unindo classificação e filogenia
+
+- O que podemos e o que não podemos aprender a partir de árvores filogenéticas
+
+- Aplicando filogenias
+
+CONCEITO 26.2: As filogenias são inferidas a partir de dados morfológicos e moleculares
+
+- Homologias morfológicas e moleculares
+
+- Separando homologia de analogia
+
+- Avaliando homologias moleculares
+
+CONCEITO 26.3: Caracteres compartilhados são utilizados para construir árvores filogenéticas
+
+- Cladística
+
+- Árvores filogenéticas com comprimentos de ramos proporcionais
+
+- Parcimônia máxima e máxima verossimilhança
+
+- Árvores filogenéticas como hipóteses
+
+CONCEITO 26.4: A história evolutiva de um organismo está documentada em seu genoma
+
+- Duplicações gênicas e famílias de genes
+
+- Evolução do genoma
+
+CONCEITO 26.5: Relógios moleculares auxiliam a decifrar o tempo evolutivo
+
+- Relógios moleculares
+
+- Aplicando um relógio molecular: datando a origem do HIV
+
+CONCEITO 26.6: Nossa compreensão sobre a árvore da vida continua a mudar com base em novos dados
+
+- De dois reinos para três domínios
+
+- O importante papel da transferência gênica horizontal
+
+
+
+Capítulo 27: Bacteria e Archaea
+
+Mestres da adaptação
+
+CONCEITO 27.1: Adaptações estruturais e funcionais contribuem para o sucesso procariótico
+
+- Estruturas da superfície celular
+
+- Motilidade
+
+- Organização interna e DNA
+
+- Reprodução
+
+CONCEITO 27.2: Reprodução rápida, mutação e recombinação genética promovem a diversidade genética nos procariotos
+
+- Reprodução rápida e mutação
+
+- Recombinação genética
+
+CONCEITO 27.3: Diversidade nutricional e adaptações metabólicas evoluíram em procariotos
+
+- O papel do oxigênio no metabolismo
+
+- Metabolismo do nitrogênio
+
+- Cooperação metabólica
+
+CONCEITO 27.4: Os procariotos irradiaram em um conjunto diverso de linhagens
+
+- Um panorama da diversidade procariótica
+
+- Bacteria
+
+- Archaea
+
+CONCEITO 27.5: Os procariotos desempenham papéis fundamentais na biosfera
+
+- Reciclagem química
+
+- Interações ecológicas
+
+CONCEITO 27.6: Os procariotos exercem impactos tanto benéficos quanto prejudiciais sobre os seres humanos
+
+- Bactérias mutualísticas
+
+- Bactérias patogênicas
+
+- Procariotos na pesquisa e na tecnologia
+
+
+
+Capítulo 28: Protistas
+
+Vida minúscula
+
+CONCEITO 28.1: Os eucariotos, em sua maioria, são organismos unicelulares
+
+- Diversidade estrutural e funcional em protistas
+
+- Quatro supergrupos de eucariotos
+
+- A endossibiose na evolução eucariótica
+
+CONCEITO 28.2: Os Excavatae incluem protistas com mitocôndrias modificadas e protistas com flagelos exclusivos
+
+- Diplomonadídeos e parabasalídeos
+
+- Euglenozoários
+
+CONCEITO 28.3: O clado "SAR" é um grupo de protistas altamente diverso definido por similaridades do DNA
+
+- Estramenópilos
+
+- Alveolados
+
+- Rhizaria
+
+CONCEITO 28.4: As algas vermelhas e as algas verdes são os parentes mais próximos das plantas terrestres
+
+- Algas vermelhas
+
+- Algas verdes
+
+CONCEITO 28.5: Os Unikontae incluem protistas que são estreitamente relacionados aos fungos e aos animais
+
+- Amebozoários
+
+- Opistocontes
+
+CONCEITO 28.6: Protistas desempenham papéis essenciais em comunidades ecológicas
+
+- Protistas simbióticos
+
+- Protistas fotossintetizantes
+
+
+
+Capítulo 29: Diversidade Vegetal I: Como as Plantas Colonizaram o Ambiente Terrestre
+
+A Terra verdejante
+
+CONCEITO 29.1: As plantas terrestres evoluíram de algas verdes
+
+- Evidência morfológica e molecular
+
+- Adaptações que permitiram a mudança para a terra
+
+- Características derivadas de plantas
+
+- A origem e a diversificação das plantas
+
+CONCEITO 29.2: Musgos e outras plantas avasculares têm ciclos de vida dominados por gametófitos
+
+- Gametófitos de briófitas
+
+- Esporófitos de briófitas
+
+- A importância ecológica e econômica dos musgos
+
+CONCEITO 29.3: Samambaias e outras plantas vasculares sem sementes foram as primeiras plantas a crescerem em altura
+
+- Origens e características de plantas vasculares
+
+- Classificação de plantas vasculares sem sementes
+
+- A importância das plantas vasculares sem sementes
+
+
+
+Capítulo 30: Diversidade Vegetal II: A Evolução das Plantas com Sementes
+
+Transformando o mundo
+
+CONCEITO 30.1: Sementes e grãos de pólen são adaptações essenciais para a vida no ambiente terrestre
+
+- Vantagens de gametófitos reduzidos
+
+- Heterosporia: a regra entre as plantas com sementes
+
+- Óvulos e produção de oosferas
+
+- Pólen e produção de espermatozoides
+
+- A vantagem evolutiva das sementes
+
+CONCEITO 30.2: As gimnospermas têm sementes "nuas", geralmente em cones
+
+- O ciclo de vida de um pinheiro
+
+- As primeiras plantas com sementes e o surgimento das gimnospermas
+
+- A diversidade das gimnospermas
+
+CONCEITO 30.3: As adaptações reprodutivas das angiospermas incluem flores e frutos
+
+- Características de angiospermas
+
+- A evolução das angiospermas
+
+- Diversidade das angiospermas
+
+CONCEITO 30.4: O bem-estar humano depende das plantas com sementes
+
+- Produtos de plantas com sementes
+
+- Ameaças à diversidade vegetal
+
+
+
+Capítulo 31: Fungos
+
+Poderosos cogumelos
+
+CONCEITO 31.1: Fungos são heterótrofos que se alimentam por absorção
+
+- Nutrição e ecologia
+
+- Estrutura corporal
+
+- Hifas especializadas e fungos micorrízicos
+
+CONCEITO 31.2: Fungos produzem esporos por meio de ciclos de vida sexual e assexuada
+
+- Reprodução sexuada
+
+- Reprodução assexuada
+
+CONCEITO 31.3: O ancestral dos fungos foi um protista unicelular, aquático e flagelado
+
+- A origem dos fungos
+
+- Os primeiros grupos divergentes de fungos
+
+- A mudança para o ambiente terrestre
+
+CONCEITO 31.4: Os fungos irradiaram em um conjunto diverso de linhagens
+
+- Quitrideos
+
+- Zigomicetos
+
+- Glomeromicetos
+
+- Ascomicetos
+
+- Basidiomicetos
+
+CONCEITO 31.5: Os fungos desempenham papéis essenciais na ciclagem de nutrientes, nas interações ecológicas e no bem-estar humano
+
+- Fungos como decompositores
+
+- Fungos como mutualistas
+
+- Fungos como parasitos
+
+- Usos práticos de fungos
+
+
+
+Capítulo 32: Um Panorama da Diversidade Animal
+
+Um reino de consumidores
+
+CONCEITO 32.1: Animais são eucariotos multicelulares heterotróficos com tecidos que se desenvolvem a partir de camadas embrionárias
+
+- Modo nutricional
+
+- Estrutura e especialização celulares
+
+- Reprodução e desenvolvimento
+
+CONCEITO 32.2: A história dos animais se estende por mais de meio bilhão de anos
+
+- Etapas na origem dos animais multicelulares
+
+- Era neoproterozoica (há 1 bilhão-542 milhões de anos)
+
+- Era paleozoica (há 542-251 milhões de anos)
+
+- Era mesozoica (251-65,5 milhões de anos atrás)
+
+- Era cenozoica (65,5 milhões de anos atrás até o presente)
+
+CONCEITO 32.3: Os animais podem ser caracterizados por "planos corporais"
+
+- Simetria
+
+- Tecidos
+
+- Cavidades corporais
+
+- Desenvolvimento protostômio e deuterostômio
+
+CONCEITO 32.4: Concepções sobre a filogenia animal continuam a ser formadas a partir de novos dados moleculares e morfológicos
+
+- A diversificação dos animais
+
+- Futuros caminhos da sistemática animal
+
+
+
+Capítulo 33: Uma Introdução aos Invertebrados
+
+A vida sem coluna vertebral
+
+CONCEITO 33.1: As esponjas são animais sésseis que carecem de tecidos verdadeiros
+
+CONCEITO 33.2: Os cnidários são um filo antigo de eumetazoários
+
+- Medusoários
+
+- Antozoários
+
+CONCEITO 33.3: Os lofotrocozoários, um clado identificado por dados moleculares, têm a gama mais ampla de formas corporais animais
+
+- Platelmintos
+
+- Rotíferos
+
+- Lofoforados: ectoproctos e braquiópodes
+
+- Moluscos
+
+- Anelídeos
+
+CONCEITO 33.4: Os ecdisozoários são o grupo animal mais rico em espécies
+
+- Nematódeos
+
+- Artrópodes
+
+CONCEITO 33.5: Equinodermos e cordados são deuterostômios
+
+- Equinodermos
+
+- Cordados
+
+
+
+Capítulo 34: A Origem e a Evolução dos Vertebrados
+
+Meio bilhão de anos de colunas vertebrais
+
+CONCEITO 34.1: Os cordados têm notocorda e cordão nervoso dorsal oco
+
+- Caracteres derivados dos cordados
+
+- Anfioxos
+
+- Tunicados
+
+- O início da evolução dos cordados
+
+CONCEITO 34.2: Vertebrados são cordados com coluna vertebral
+
+- Caracteres derivados de vertebrados
+
+- Peixes-bruxa e lampreias
+
+- O início da evolução dos vertebrados
+
+- As origens dos ossos e dos dentes
+
+CONCEITO 34.3: Gnatostômios são vertebrados com mandíbulas
+
+- Caracteres derivados dos gnatostômios
+
+- Gnatostômios fósseis
+
+- Condrictes (tubarões, raias e seus parentes)
+
+- Peixes com nadadeiras raiadas e lobadas
+
+CONCEITO 34.4: Tetrápodes são gnatostômios com membros locomotores
+
+- Caracteres derivados dos tetrápodes
+
+- A origem dos tetrápodes
+
+- Anfíbios
+
+CONCEITO 34.5: Amniotas são tetrápodes que têm um ovo adaptado ao meio terrestre
+
+- Caracteres derivados dos amniotas
+
+- Os primeiros amniotas
+
+- Répteis
+
+CONCEITO 34.6: Mamíferos são amniotas que têm pelos e produzem leite
+
+- Caracteres derivados de mamíferos
+
+- A evolução inicial dos mamíferos
+
+- Monotremados
+
+- Marsupiais
+
+- Eutérios (mamíferos placentários)
+
+CONCEITO 34.7: Seres humanos são mamíferos com cérebro grande e locomoção bípede
+
+- Caracteres derivados dos seres humanos
+
+- Os primeiros hominíneos
+
+- Australopitecíneos
+
+- Bipedalismo
+
+- O uso de ferramentas
+
+- Os primeiros Homo
+
+- Neandertais
+
+- Homo sapiens
+
+
+
+
+
+UNIDADE 6: FORMA E FUNÇÃO DAS PLANTAS
+
+
+
+Capítulo 35: Estrutura, Crescimento e Desenvolvimento
+
+As plantas são computadores?
+
+CONCEITO 35.1: As plantas têm uma organização hierárquica, que consiste em órgãos, tecidos e células
+
+- Os três órgãos vegetais básicos: raízes, caules e folhas
+
+- Sistemas de tecidos dérmicos, vasculares e fundamentais
+
+- Tipos comuns de células vegetais
+
+CONCEITO 35.2: Meristemas diferentes geram novas células para os crescimentos primário e secundário
+
+CONCEITO 35.3: O crescimento primário alonga raízes e partes aéreas
+
+- Crescimento primário das raízes
+
+- Crescimento primário de partes aéreas
+
+CONCEITO 35.4: O crescimento secundário aumenta o diâmetro de caules e raízes em plantas lenhosas
+
+- O câmbio vascular e o sistema vascular secundário
+
+- O felogênio e produção de periderme
+
+- Evolução do crescimento secundário
+
+CONCEITO 35.5: O crescimento, a morfogênese e a diferenciação celulares produzem o corpo da planta
+
+- Organismos-modelo: revolucionando o estudo de plantas
+
+- Crescimento: divisão e expansão celulares
+
+- A morfogênese e a formação do padrão
+
+- Expressão gênica e o controle da diferenciação celular
+
+- Alterações no desenvolvimento: mudanças de fases
+
+- Controle genético do florescimento
+
+
+
+Capítulo 36: Obtenção e Transporte de Recursos em Plantas Vasculares
+
+Uma grande agitação acontecendo
+
+CONCEITO 36.1: As adaptações para obtenção de recursos foram elementos-chave na evolução das plantas vasculares
+
+- Arquitetura da parte aérea e captação de luz
+
+- Arquitetura da raiz e obtenção de água e minerais
+
+CONCEITO 36.2: Mecanismos diferentes transportam substâncias por distâncias curtas ou longas
+
+- Apoplasto e simplasto: continuum de transporte
+
+- Transporte de solutos a curta distância através de membranas plasmáticas
+
+- Transporte de água a curta distância através de membranas plasmáticas
+
+- Transporte de longa distância: fluxo de massa
+
+CONCEITO 36.3: Através do xilema, a transpiração impulsiona o transporte de água e minerais desde as raízes até as partes aéreas
+
+- Absorção de água e minerais pelas células das raízes
+
+- Transporte de água e minerais no xilema
+
+- Transporte por fluxo de massa via xilema
+
+- Ascensão da seiva do xilema pelo fluxo de massa: uma revisão
+
+CONCEITO 36.4: A taxa de transpiração é regulada pelos estômatos
+
+- Estômatos: principais rotas de perda de água
+
+- Mecanismos de abertura e fechamento estomáticos
+
+- Estímulos para a abertura e o fechamento estomáticos
+
+- Efeitos da transpiração sobre a murcha e a temperatura foliar
+
+- Adaptações que reduzem a perda evaporativa de água
+
+CONCEITO 36.5: Através do floema, os açúcares são transportados das fontes para os drenos
+
+- Movimento de açúcares das fontes para os drenos
+
+- Fluxo de massa por pressão positiva: mecanismo de translocação em angiospermas
+
+CONCEITO 36.6: O simplasto é altamente dinâmico
+
+- Mudanças no número e no tamanho dos poros dos plasmodesmos
+
+- Floema: uma "superrodovia" de informações
+
+- Sinalização elétrica no floema
+
+
+
+Capítulo 37: Solo e Nutrição Vegetal
+
+A carnívora saca-rolhas
+
+CONCEITO 37.1: O solo contém um ecossistema vivo e complexo
+
+- Textura do solo
+
+- Composição da camada superior do solo
+
+- Conservação do solo e agricultura sustentável
+
+CONCEITO 37.2: As plantas necessitam de elementos essenciais para completar o seu ciclo de vida
+
+- Elementos essenciais
+
+- Sintomas de deficiência mineral
+
+- Melhoramento da nutrição vegetal pela modificação genética
+
+CONCEITO 37.3: A nutrição vegetal muitas vezes envolve relações com outros organismos
+
+- Bactérias e nutrição mineral
+
+- Os fungos e a nutrição vegetal
+
+- Epífitas, plantas parasitas e plantas carnívoras
+
+
+
+Capítulo 38: Reprodução de Angiospermas e Biotecnologia
+
+Flores que enganam
+
+CONCEITO 38.1: Flores, fecundação dupla e frutos são características fundamentais do ciclo de vida das angiospermas
+
+- Estrutura e função da flor
+
+- Ciclo de vida das angiospermas: visão geral
+
+- Métodos de polinização
+
+- Da semente até a planta florida: uma visão mais próxima
+
+- Estrutura e função do fruto
+
+CONCEITO 38.2: As plantas floríferas se reproduzem sexuada e assexuadamente ou das duas maneiras
+
+- Mecanismos de reprodução assexuada
+
+- Vantagens e desvantagens das reproduções assexuada e sexuada
+
+- Mecanismos que impedem a autofecundação
+
+- Totipotência, reprodução vegetativa e cultura de tecidos
+
+CONCEITO 38.3: As pessoas modificam as culturas mediante cruzamento e engenharia genética
+
+- Melhoramento vegetal
+
+- Biotecnologia vegetal e engenharia genética
+
+- O debate sobre a biotecnologia vegetal
+
+
+
+Capítulo 39: Respostas das Plantas a Sinais Internos e Externos
+
+Estímulos e vida estacionária
+
+CONCEITO 39.1: As rotas de transdução de sinais ligam a recepção à resposta
+
+- Recepção
+
+- Transdução
+
+- Resposta
+
+CONCEITO 39.2: Os fitormônios ajudam a coordenar o crescimento, o desenvolvimento e as respostas aos estímulos
+
+- Uma visão geral dos fitormônios
+
+CONCEITO 39.3: As respostas à luz são cruciais para o sucesso das plantas
+
+- Fotorreceptores de luz azul
+
+- Fitocromos
+
+- Relógios biológicos e ritmos circadianos
+
+- Efeito da luz no relógio biológico
+
+- Fotoperiodismo e respostas às estações
+
+CONCEITO 39.4: As plantas respondem a uma ampla diversidade de estímulos além da luz
+
+- Gravidade
+
+- Estímulos mecânicos
+
+- Estresses ambientais
+
+CONCEITO 39.5: As plantas respondem aos ataques de patógenos e de herbívoros
+
+- Defesas contra patógenos
+
+- Defesas contra herbívoros
+
+
+
+
+
+UNIDADE 7: FORMA E FUNÇÃO DOS ANIMAIS
+
+
+
+Capítulo 40: Princípios Básicos da Forma e da Função dos Animais
+
+Formas diferentes, desafios comuns
+
+CONCEITO 40.1: A forma e a função dos animais estão correlacionadas em todos os níveis de organização
+
+- Evolução do tamanho e da forma
+
+- Troca com o ambiente
+
+- Organização hierárquica de planos corporais
+
+- Coordenação e controle
+
+CONCEITO 40.2: O controle por retroalimentação mantém o ambiente interno em muitos animais
+
+- Regulação e conformação
+
+- Homeostase
+
+CONCEITO 40.3: Os processos homeostáticos para a termorregulação envolvem forma, função e comportamento
+
+- Endotermia e ectotermia
+
+- Variação na temperatura do corpo
+
+- Equilibrando perda e ganho de calor
+
+- Aclimação na termorregulação
+
+- Termostatos fisiológicos e febre
+
+CONCEITO 40.4: As necessidades de energia estão relacionadas ao tamanho, à atividade e ao ambiente do animal
+
+- Alocação e uso de energia
+
+- Quantificando o uso de energia
+
+- Taxa metabólica mínima e termorregulação
+
+- Influências na taxa metabólica
+
+- Torpor e conservação de energia
+
+
+
+Capítulo 41: Nutrição Animal
+
+A necessidade de se alimentar
+
+CONCEITO 41.1: A dieta de um animal deve suprir energia química, moléculas orgânicas e nutrientes essenciais
+
+- Nutrientes essenciais
+
+- Deficiências alimentares
+
+- Avaliando as necessidades nutricionais
+
+CONCEITO 41.2: Os estágios principais do processamento de alimentos são a ingestão, a digestão, a absorção e a eliminação
+
+- Compartimentos digestórios
+
+CONCEITO 41.3: Os órgãos especializados para estágios sequenciais do processamento de alimentos formam o sistema digestório dos mamíferos
+
+- Cavidade oral, faringe e esôfago
+
+- Digestão no estômago
+
+- Digestão no intestino delgado
+
+- Absorção no intestino delgado
+
+- Processamento no intestino grosso
+
+CONCEITO 41.4: As adaptações evolutivas dos sistemas digestórios dos vertebrados se correlacionam com a dieta
+
+- Adaptações dentárias
+
+- Adaptações do estômago e do intestino
+
+- Adaptações mutualísticas
+
+CONCEITO 41.5: Circuitos de retroalimentação regulam a digestão, a reserva de energia e o apetite
+
+- Regulação da digestão
+
+- Regulação da reserva de energia
+
+- Regulação do apetite e consumo
+
+
+
+Capítulo 42: Circulação e Trocas Gasosas
+
+Locais de troca
+
+CONCEITO 42.1: Os sistemas circulatórios conectam as superfícies de trocas com células em todo o corpo
+
+- Cavidades gastrovasculares
+
+- Sistemas circulatórios abertos e fechados
+
+- Organização dos sistemas circulatórios dos vertebrados
+
+CONCEITO 42.2: Os ciclos coordenados de contração cardíaca acionam a circulação dupla nos mamíferos
+
+- Circulação nos mamíferos
+
+- Coração dos mamíferos: um exame mais minucioso
+
+- Mantendo o batimento rítmico do coração
+
+CONCEITO 42.3: Os padrões de pressão e de fluxo arteriais refletem a estrutura e a organização dos vasos sanguíneos
+
+- Estrutura e função dos vasos sanguíneos
+
+- Velocidade do fluxo sanguíneo
+
+- Pressão sanguínea
+
+- Funcionamento dos capilares
+
+- Retorno do líquido pelo sistema linfático
+
+CONCEITO 42.4: Os componentes sanguíneos atuam nas trocas, no transporte e na defesa
+
+- Função e composição do sangue
+
+- Doenças cardiovasculares
+
+CONCEITO 42.5: As trocas gasosas ocorrem através de superfícies respiratórias especializadas
+
+- Gradientes de pressão parcial na troca gasosa
+
+- Meios respiratórios
+
+- Superfícies respiratórias
+
+- Brânquias em animais aquáticos
+
+- Sistemas traqueais em insetos
+
+- Pulmões
+
+CONCEITO 42.6: A respiração ventila os pulmões
+
+- Como um anfíbio respira
+
+- Como uma ave respira
+
+- Como um mamífero respira
+
+- Controle da respiração nos humanos
+
+CONCEITO 42.7: As adaptações para as trocas gasosas incluem pigmentos que ligam e transportam gases
+
+- Coordenação da circulação e da troca gasosa
+
+- Pigmentos respiratórios
+
+- Adaptações respiratórias de mamíferos mergulhadores
+
+
+
+Capítulo 43: Sistema Imune
+
+Reconhecimento e Resposta
+
+CONCEITO 43.1: Na imunidade inata, o reconhecimento e a resposta dependem de características comuns aos grupos de patógenos
+
+- Imunidade inata de invertebrados
+
+- Imunidade inata de vertebrados
+
+- Fuga da imunidade inata pelos patógenos
+
+CONCEITO 43.2: Na imunidade adaptativa, os receptores proporcionam reconhecimento específico dos patógenos
+
+- Reconhecimento de antígenos pelas células B e anticorpos
+
+- Reconhecimento de antígenos pelas células T
+
+- Desenvolvimento das células B e das células T
+
+CONCEITO 43.3: A imunidade adaptativa defende contra infecções das células e dos líquidos corporais
+
+- Células T auxiliares: resposta a quase todos os antígenos
+
+- Células T citotóxicas: uma resposta às células infectadas
+
+- Células B e anticorpos: uma resposta aos patógenos extracelulares
+
+- Resumo da resposta imune humoral e da resposta mediada por células
+
+- Imunidade ativa e passiva
+
+- Anticorpos como ferramentas
+
+- Rejeição imune
+
+CONCEITO 43.4: Os distúrbios no funcionamento do sistema imune podem provocar ou exacerbar doenças
+
+- Respostas imunes exageradas, autodirecionadas e reduzidas
+
+- Adaptações evolutivas de patógenos que fundamentam a obstrução do sistema imune
+
+- Câncer e imunidade
+
+
+
+Capítulo 44: Osmorregulação e Excreção
+
+Uma ação de equilíbrio
+
+CONCEITO 44.1: A osmorregulação equilibra a absorção e a perda de água e de solutos
+
+- Osmose e osmolaridade
+
+- Desafios e mecanismos osmorreguladores
+
+- Energética da osmorregulação
+
+- Epitélios de transporte na osmorregulação
+
+CONCEITO 44.2: Os resíduos nitrogenados de um animal refletem sua filogenia e seu hábitat
+
+- Formas de resíduo nitrogenado
+
+- Influência da evolução e do ambiente nos resíduos nitrogenados
+
+CONCEITO 44.3: Os diversos sistemas excretores são variações de um tema tubular
+
+- Processos excretores
+
+- Visão geral dos sistemas excretores
+
+CONCEITO 44.4: O néfron é organizado para o processamento gradual de sangue filtrado
+
+- Do filtrado sanguíneo até a urina: um olhar mais de perto
+
+- Gradientes de solutos e conservação de água
+
+- Adaptações do rim dos vertebrados a ambientes diversos
+
+- Estudo de caso: Função renal em um morcego-vampiro
+
+CONCEITO 44.5: Os circuitos hormonais vinculam a função renal, o equilíbrio hídrico e a pressão sanguínea
+
+- Regulação homeostática do rim
+
+
+
+Capítulo 45: Hormônios e o Sistema Endócrino
+
+Reguladores corporais de longa distância
+
+CONCEITO 45.1: Hormônios e outras moléculas de sinalização se ligam a receptores-alvo, desencadeando rotas de resposta específicas
+
+- Comunicação intercelular
+
+- Classe química dos reguladores e hormônios locais
+
+- Rotas de resposta celular
+
+- Efeitos múltiplos dos hormônios
+
+- Tecidos endócrinos e órgãos
+
+CONCEITO 45.2: Regulação por retroalimentação e coordenação com o sistema nervoso são comuns na sinalização endócrina
+
+- Rotas hormonais simples
+
+- Regulação por retroalimentação
+
+- Coordenação dos sistemas endócrino e nervoso
+
+- Regulação da tireoide: Uma rota hormonal em cascata
+
+- Regulação hormonal do crescimento
+
+CONCEITO 45.3: Glândulas endócrinas respondem a diversos estímulos na regulação da homeostasia, do desenvolvimento e do comportamento
+
+- Paratormônio e vitamina D: Controle do cálcio no sangue
+
+- Hormônios suprarrenais: resposta ao estresse
+
+- Hormônios sexuais
+
+- Hormônios e ritmos biológicos
+
+- Evolução da função hormonal
+
+
+
+Capítulo 46: Reprodução Animal
+
+CONCEITO 46.1: Tanto a reprodução sexuada quanto a assexuada ocorrem no mundo animal
+
+- Mecanismos de reprodução assexuada
+
+- Reprodução sexuada: um enigma da evolução
+
+- Ciclos reprodutivos
+
+- Variações nos padrões de reprodução sexuada
+
+CONCEITO 46.2: A fertilização depende dos mecanismos que unem espermatozoide e óvulo da mesma espécie
+
+- Assegurando a sobrevivência da prole
+
+- Produção e liberação de gametas
+
+CONCEITO 46.3: Os órgãos reprodutivos produzem e transportam os gametas
+
+- Anatomia do sistema reprodutor masculino
+
+- Anatomia do sistema reprodutor feminino
+
+- Gametogênese
+
+CONCEITO 46.4: A interação de hormônios tróficos e sexuais regula a reprodução dos mamíferos
+
+- Controle hormonal do sistema reprodutor masculino
+
+- Controle hormonal dos ciclos reprodutivos femininos
+
+- Resposta sexual humana
+
+CONCEITO 46.5: Nos mamíferos placentários, um embrião desenvolve-se completamente dentro do útero da mãe
+
+- Concepção, desenvolvimento embrionário e nascimento
+
+- Tolerância imune materna ao embrião e ao feto
+
+- Contracepção e aborto
+
+- Tecnologias reprodutivas modernas
+
+
+
+Capítulo 47: Desenvolvimento Animal
+
+O plano de construção do corpo
+
+CONCEITO 47.1: A fertilização e a clivagem iniciam o desenvolvimento embrionário
+
+- Fertilização
+
+- Clivagem
+
+- Gastrulação
+
+- Organogênese
+
+CONCEITO 47.2: A morfogênese nos animais envolve mudanças específicas no formato, na posição e na sobrevivência da célula
+
+- Adaptações evolutivas dos amniotas
+
+CONCEITO 47.3: Os determinantes citoplasmáticos e os sinais indutivos contribuem para a especificação do destino celular
+
+- Mapeamento do destino
+
+- Determinação do destino celular e padrão de formação por sinais indutivos
+
+- Cílios e o destino celular
+
+
+
+Capítulo 48: Neurônios, Sinapses e Sinalização
+
+Rotas de comunicação
+
+CONCEITO 48.1: A organização e a estrutura dos neurônios refletem sua função na transferência de informações
+
+- Estrutura e função do neurônio
+
+- Introdução ao processamento das informações
+
+CONCEITO 48.2: As bombas de íons e os canais iônicos estabelecem o potencial de repouso de um neurônio
+
+- Formação do potencial de repouso
+
+- Explicando o potencial de repouso
+
+CONCEITO 48.3: Os potenciais de ação são os sinais conduzidos por axônios
+
+- Hiperpolarização e despolarização
+
+- Potenciais graduados e potenciais de ação
+
+- Geração de potenciais de ação: uma visão mais aprofundada
+
+- Condução do potencial de ação
+
+CONCEITO 48.4: Os neurônios comunicam-se com outras células por meio de sinapses
+
+- Geração de potenciais pós-sinápticos
+
+- Somação dos potenciais pós-sinápticos
+
+- Sinalização sináptica modulada
+
+- Neurotransmissores
+
+
+
+Capítulo 49: Sistema Nervoso
+
+Centro de comando e controle
+
+CONCEITO 49.1: Sistemas nervosos consistem em circuitos de neurônios e em células de apoio
+
+- A glia
+
+- Organização do sistema nervoso de vertebrados
+
+- O sistema nervoso periférico
+
+CONCEITO 49.2: O cérebro dos vertebrados tem regiões especializadas
+
+- Vigília e sono
+
+- Regulação do relógio biológico
+
+- Emoções
+
+- Imagem funcional do cérebro
+
+CONCEITO 49.3: O córtex cerebral controla os movimentos voluntários e as funções cognitivas
+
+- Processamento das informações
+
+- Linguagem e discurso
+
+- Lateralização da função cortical
+
+- Função do lobo frontal
+
+- Evolução da cognição em vertebrados
+
+CONCEITO 49.4: Mudanças nas conexões sinápticas formam a base da memória e da aprendizagem
+
+- Plasticidade neuronal
+
+- Memória e aprendizagem
+
+- A potenciação de longa duração
+
+CONCEITO 49.5: Muitos distúrbios do sistema nervoso podem ser explicados em termos moleculares
+
+- Esquizofrenia
+
+- Depressão
+
+- Sistema de recompensa do cérebro e toxicodependência
+
+- Doença de Alzheimer
+
+- Doença de Parkinson
+
+
+
+Capítulo 50: Mecanismos Sensoriais e Motores
+
+Sensação e sensibilidade
+
+CONCEITO 50.1: Receptores sensoriais fazem a transdução da energia do estímulo e transmitem sinais para o sistema nervoso central
+
+- Recepção sensorial e transdução
+
+- Transmissão
+
+- Percepção
+
+- Ampliação e adaptação
+
+- Tipos de receptores sensoriais
+
+CONCEITO 50.2: Os mecanorreceptores responsáveis pela audição e pelo equilíbrio detectam o movimento de líquidos ou a sedimentação de partículas
+
+- Percepção da gravidade e do som em invertebrados
+
+- Audição e equilíbrio em mamíferos
+
+CONCEITO 50.3: Os diversos receptores visuais de animais dependem da luz absorvida pelos pigmentos
+
+- Evolução da percepção visual
+
+- O sistema visual dos vertebrados
+
+CONCEITO 50.4: Os sentidos do paladar e do olfato dependem de um conjunto semelhante de receptores sensoriais
+
+- Paladar em mamíferos
+
+- O olfato em humanos
+
+CONCEITO 50.5: A interação física dos filamentos proteicos é necessária para a função muscular
+
+- Musculatura esquelética dos vertebrados
+
+- Outros tipos de músculos
+
+CONCEITO 50.6: Sistemas esqueléticos transformam a contração muscular em locomoção
+
+- Tipos de sistemas esquelético
+
+- Tipos de locomoção
+
+
+
+Capítulo 51: Comportamento Animal
+
+O como e o porquê da atividade animal
+
+CONCEITO 51.1: Leves estímulos sensoriais podem desencadear comportamentos simples e complexos
+
+- Padrões fixos de ações
+
+- Migração
+
+- Ritmos comportamentais
+
+- Sinais animais e comunicação
+
+CONCEITO 51.2: A aprendizagem estabelece ligações específicas entre experiência e comportamento
+
+- Experiência e comportamento
+
+- Aprendizagem
+
+CONCEITO 51.3: A seleção para a sobrevivência e para o sucesso reprodutivo dos indivíduos pode explicar diversos comportamentos
+
+- Evolução do comportamento de forrageio
+
+- Comportamento de acasalamento e escolha do parceiro
+
+CONCEITO 51.4: Análises genéticas e o conceito de valor adaptativo inclusivo fornecem a base para estudar a evolução do comportamento
+
+- Base genética do comportamento
+
+- Variação genética e evolução do comportamento
+
+- Altruísmo
+
+- Valor adaptativo inclusivo
+
+- Evolução e cultura humana
+
+
+
+
+
+UNIDADE 8: ECOLOGIA
+
+
+
+Capítulo 52: Introdução à Ecologia e à Biosfera
+
+Descobrindo a ecologia
+
+CONCEITO 52.1: O clima da Terra varia com a latitude e a estação e está mudando rapidamente
+
+- Padrões climáticos globais
+
+- Efeitos regionais e locais no clima
+
+- Microclima
+
+- Mudança climática global
+
+CONCEITO 52.2: A estrutura e a distribuição dos biomas terrestres são controladas pelo clima e por perturbações
+
+- Clima e biomas terrestres
+
+- Características gerais de biomas terrestres
+
+- Perturbações e biomas terrestres
+
+CONCEITO 52.3: Os biomas aquáticos são sistemas diversos e dinâmicos que cobrem a maior parte da Terra
+
+- Zoneação dos biomas aquáticos
+
+CONCEITO 52.4: As interações entre os organismos e o ambiente limitam a distribuição das espécies
+
+- Dispersão e distribuição
+
+- Comportamento e seleção de hábitat
+
+- Fatores bióticos
+
+- Fatores abióticos
+
+
+
+Capítulo 53: Ecologia de Populações
+
+Trilhas das tartarugas
+
+CONCEITO 53.1: Os processos biológicos influenciam a densidade, a dispersão e a demografia das populações
+
+- Densidade e dispersão
+
+- Demografia
+
+CONCEITO 53.2: O modelo exponencial descreve o crescimento populacional em um ambiente idealizado e ilimitado
+
+- Taxa de crescimento per capita
+
+- Crescimento exponencial
+
+CONCEITO 53.3: O modelo logístico descreve como uma população cresce mais lentamente à medida que se aproxima da sua capacidade de suporte
+
+- Modelo de crescimento logístico
+
+- Modelo logístico e populações reais
+
+CONCEITO 53.4: As características da história de vida são produtos da seleção natural
+
+- Evolução e diversidade da história de vida
+
+- Compensações (trade-offs) e histórias de vida
+
+CONCEITO 53.5: Muitos fatores que regulam o crescimento populacional são dependentes da densidade
+
+- Mudança populacional e densidade populacional
+
+- Mecanismos de regulação populacional dependente da densidade
+
+- Dinâmica populacional
+
+CONCEITO 53.6: A população humana não está mais em crescimento exponencial, mas ainda está crescendo rapidamente
+
+- População humana global
+
+- Capacidade de suporte global
+
+
+
+Capítulo 54: Ecologia de Comunidades
+
+Comunidades em movimento
+
+CONCEITO 54.1: As interações das comunidades são classificadas conforme elas ajudam, prejudicam ou não exercem efeitos sobre as espécies envolvidas
+
+- Competição
+
+- Predação
+
+- Herbivoria
+
+- Simbiose
+
+- Facilitação
+
+CONCEITO 54.2: A diversidade e a estrutura trófica caracterizam as comunidades biológicas
+
+- Diversidade de espécies
+
+- Diversidade e estabilidade da comunidade
+
+- Estrutura trófica
+
+- Espécies com grande impacto
+
+- Controles de baixo para cima e de cima para baixo
+
+CONCEITO 54.3: O distúrbio influencia a diversidade e a composição de espécies
+
+- Caracterização dos distúrbios
+
+- Sucessão ecológica
+
+- Distúrbio por ações antrópicas
+
+CONCEITO 54.4: Fatores biogeográficos afetam a diversidade das comunidades
+
+- Gradientes latitudinais
+
+- Efeitos de área
+
+- Modelo do equilíbrio de ilhas
+
+CONCEITO 54.5: Patógenos alteram local e globalmente a estrutura das comunidades
+
+- Patógenos e estrutura das comunidades
+
+- Ecologia de comunidades e doenças zoonóticas
+
+
+
+Capítulo 55: Ecossistemas e Ecologia da Restauração
+
+Transformado em tundra
+
+CONCEITO 55.1: As leis físicas governam o fluxo de energia e a ciclagem química nos ecossistemas
+
+- Conservação de energia
+
+- Conservação da massa
+
+- Energia, matéria e níveis tróficos
+
+CONCEITO 55.2: A energia e outros fatores limitantes controlam a produção primária nos ecossistemas
+
+- Orçamento energético do ecossistema
+
+- Produção primária em ecossistemas aquáticos
+
+- Produção primária em ecossistemas terrestres
+
+CONCEITO 55.3: A transferência de energia entre os níveis tróficos normalmente tem apenas 10% de eficiência
+
+- Eficiência de produção
+
+- Eficiência trófica e pirâmides ecológicas
+
+CONCEITO 55.4: Os processos biológicos e geoquímicos realizam ciclagem de nutrientes e de água nos ecossistemas
+
+- Ciclos biogeoquímicos
+
+- Taxas de decomposição e de ciclagem de nutrientes
+
+- Estudo de caso: ciclagem de nutrientes na Floresta Experimental Hubbard Brook
+
+CONCEITO 55.5: Os ecólogos da restauração devolvem os ecossistemas degradados a um estado mais natural
+
+- Biorremediação
+
+- Incremento biológico
+
+
+
+Capítulo 56: Biologia da Conservação e Mudança Global
+
+Tesouro psicodélico
+
+CONCEITO 56.1: As atividades humanas ameaçam a biodiversidade da Terra
+
+- Três níveis de biodiversidade
+
+- Biodiversidade e bem-estar humano
+
+- Ameaças à biodiversidade
+
+- Espécies extintas podem ser ressuscitadas?
+
+CONCEITO 56.2: A conservação de populações enfoca o tamanho populacional, a diversidade genética e os hábitats críticos
+
+- Abordagem das populações pequenas
+
+- Abordagem da população em declínio
+
+- Comparando demandas conflitantes
+
+CONCEITO 56.3: A conservação regional e da paisagem ajuda a sustentar a biodiversidade
+
+- Estrutura da paisagem e biodiversidade
+
+- Estabelecendo áreas de proteção
+
+- Ecologia urbana
+
+CONCEITO 56.4: A Terra está mudando rapidamente como consequência de ações humanas
+
+- Enriquecimento de nutrientes
+
+- Toxinas no ambiente
+
+- Gases-estufa e mudança climática
+
+- Esgotamento do ozônio atmosférico
+
+CONCEITO 56.5: O desenvolvimento sustentável pode melhorar vidas humanas junto com a conservação da biodiversidade
+
+- Desenvolvimento sustentável
+
+- O futuro da biosfera
